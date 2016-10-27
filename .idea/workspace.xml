@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21049bd1-aeea-498c-b704-8f0bed3cc380" name="Default" comment="" />
+    <ignored path="CheJianYuYue@M.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="E:/MyTemplate/.tmp/" />
+    <ignored path="E:/MyTemplate/temp/" />
+    <ignored path="E:/MyTemplate/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="CheJianYuYue@M">
+      <favorite_root url="file://E:/MyTemplate/dist/YongHuDengLu.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="E:/MyTemplate/src/sass/modules/_form.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_variablesCustom.scss" />
+        <option value="E:/MyTemplate/dist/a.html" />
+        <option value="E:/MyTemplate/dist/s.html" />
+        <option value="E:/MyTemplate/dist/ss.html" />
+        <option value="E:/MyTemplate/dist/img/template.html" />
+        <option value="E:/MyTemplate/src/sass/utils/_mixins.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_placeholders.scss" />
+        <option value="E:/MyTemplate/dist/test.html" />
+        <option value="E:/MyTemplate/src/sass/template.scss" />
+        <option value="E:/MyTemplate/dist/css/template.css" />
+        <option value="E:/MyTemplate/src/sass/base/_normalize.scss" />
+        <option value="E:/MyTemplate/dist/template.html" />
+        <option value="E:/MyTemplate/dist/template.html" />
+        <option value="E:/MyTemplate/src/sass/modules/_button.scss" />
+        <option value="E:/MyTemplate/src/sass/layout/_grid.scss" />
+        <option value="E:/MyTemplate/src/sass/base/_typography.scss" />
+        <option value="E:/MyTemplate/src/sass/base/_typography.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_function.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_variables.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_variablesCustom.scss" />
+        <option value="E:/MyTemplate/src/sass/utils/_placeholders.scss" />
+        <option value="E:/MyTemplate/package.json" />
+        <option value="E:/MyTemplate/src/index.html" />
+        <option value="E:/MyTemplate/src/sass/index.scss" />
+        <option value="E:/MyTemplate/src/sass/index.scss" />
+        <option value="E:/MyTemplate/src/css/index.css" />
+        <option value="E:/MyTemplate/src/css/index.css" />
+        <option value="E:/MyTemplate/src/sass/helpers/_helpers.scss" />
+        <option value="E:/MyTemplate/gulpfile.js" />
+        <option value="E:/MyTemplate/src/html/parts/header.html" />
+        <option value="E:/MyTemplate/src/html/index.html" />
+        <option value="$PROJECT_DIR$/src/sp.css" />
+        <option value="$PROJECT_DIR$/dist/test/css/sp.css" />
+        <option value="$PROJECT_DIR$/src/test/sp2.css" />
+        <option value="$PROJECT_DIR$/src/test/sp.css" />
+        <option value="$PROJECT_DIR$/src/html/parts/_header.html" />
+        <option value="$PROJECT_DIR$/src/html/parts/_footer.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/dist/css/index.css" />
+        <option value="$PROJECT_DIR$/src/sass/modules/_button.scss" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/css/index.css" />
+        <option value="$PROJECT_DIR$/src/sass/modules/_form.scss" />
+        <option value="$PROJECT_DIR$/src/sass/index.scss" />
+        <option value="$PROJECT_DIR$/src/html/index.html" />
+        <option value="$PROJECT_DIR$/src/html/index.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/html/include/_header.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <task-name>sass-c</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>postcss</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>css-sprite</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>css-min</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>img-min</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>js-min</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>html-import</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>html-copy</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>watch-sass</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>watch-htmlImport</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>public-css</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>public-html</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>public-all</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <dependencies>
+              <dependency value="sass-c" />
+            </dependencies>
+            <task-name>serve</task-name>
+          </GulpTaskState>
+        </tasks>
+      </GulpfileState>
+    </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1554" />
+    <option name="height" value="916" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>Sass/SCSS</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CSS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="false" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="false" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="E:\ProjectTemplate\node_modules\gulp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://www.baidu.com" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SourceSave\GulpTemplate\src\html" />
+      <recent name="E:\SourceSave\GulpTemplate\src" />
+      <recent name="E:\SourceSave\GulpTemplate\src\css" />
+      <recent name="E:\SourceSave\GulpTemplate\src\test" />
+      <recent name="E:\SourceSave\MyTemplate\src\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SourceSave\GulpTemplate\src\img" />
+      <recent name="E:\SourceSave\GulpTemplate\src\test" />
+      <recent name="E:\SourceSave\SassTemplate\src\js\ie" />
+      <recent name="E:\SourceSave\MianJian@M-Test\src\sass\modules" />
+      <recent name="E:\SourceSave\MianJian@M-Test\src\sass\layout" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.CheJianZhanXinXi.html">
+    <configuration default="false" name="CheJianZhanXinXi.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:2333/CheJianYuYue@M/dist/CheJianZhanXinXi.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CheJianZhanXinXi.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.CheJianZhanXinXi.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21049bd1-aeea-498c-b704-8f0bed3cc380" name="Default" comment="" />
+      <created>1468549771791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1468549771791</updated>
+      <workItem from="1468549773182" duration="4234000" />
+      <workItem from="1468561703839" duration="3220000" />
+      <workItem from="1468914279651" duration="7829000" />
+      <workItem from="1468997649977" duration="10642000" />
+      <workItem from="1469063211547" duration="15829000" />
+      <workItem from="1469407997026" duration="2263000" />
+      <workItem from="1469411764974" duration="12308000" />
+      <workItem from="1469434220902" duration="6002000" />
+      <workItem from="1469497949819" duration="7251000" />
+      <workItem from="1469513704130" duration="9921000" />
+      <workItem from="1469586670137" duration="11014000" />
+      <workItem from="1469669404819" duration="714000" />
+      <workItem from="1469687361776" duration="5748000" />
+      <workItem from="1469694610751" duration="1694000" />
+      <workItem from="1470101396157" duration="991000" />
+      <workItem from="1470107024831" duration="14250000" />
+      <workItem from="1470186841887" duration="4487000" />
+      <workItem from="1470192381212" duration="7092000" />
+      <workItem from="1470210904299" duration="597000" />
+      <workItem from="1470273304229" duration="122000" />
+      <workItem from="1470273446292" duration="13000" />
+      <workItem from="1470273506641" duration="9764000" />
+      <workItem from="1470362039263" duration="24450000" />
+      <workItem from="1470619814241" duration="8964000" />
+      <workItem from="1470637566218" duration="2713000" />
+      <workItem from="1470640352976" duration="33000" />
+      <workItem from="1470640423364" duration="1443000" />
+      <workItem from="1470643174858" duration="1261000" />
+      <workItem from="1470644853277" duration="6634000" />
+      <workItem from="1471414579673" duration="1628000" />
+      <workItem from="1471419185294" duration="606000" />
+      <workItem from="1471423611932" duration="359000" />
+      <workItem from="1471425841886" duration="226000" />
+      <workItem from="1471482894019" duration="2800000" />
+      <workItem from="1471578121650" duration="8768000" />
+      <workItem from="1471831464823" duration="22598000" />
+      <workItem from="1472006134606" duration="792000" />
+      <workItem from="1472007590598" duration="381000" />
+      <workItem from="1472007993448" duration="92000" />
+      <workItem from="1472008125326" duration="1873000" />
+      <workItem from="1472010231926" duration="1974000" />
+      <workItem from="1472464654196" duration="22000" />
+      <workItem from="1472470174643" duration="90000" />
+      <workItem from="1472470298113" duration="253000" />
+      <workItem from="1472473094288" duration="241000" />
+      <workItem from="1472522596142" duration="1329000" />
+      <workItem from="1472525368139" duration="11527000" />
+      <workItem from="1472544154801" duration="3740000" />
+      <workItem from="1472547933233" duration="2262000" />
+      <workItem from="1472612328407" duration="6817000" />
+      <workItem from="1472693289465" duration="984000" />
+      <workItem from="1472719572621" duration="9004000" />
+      <workItem from="1472782389201" duration="972000" />
+      <workItem from="1473053976693" duration="11523000" />
+      <workItem from="1473211708650" duration="1230000" />
+      <workItem from="1473216234015" duration="611000" />
+      <workItem from="1473234330189" duration="4808000" />
+      <workItem from="1473389321000" duration="107000" />
+      <workItem from="1473389450462" duration="910000" />
+      <workItem from="1473398804500" duration="432000" />
+      <workItem from="1473399262708" duration="32000" />
+      <workItem from="1473405949996" duration="1065000" />
+      <workItem from="1473407936222" duration="951000" />
+      <workItem from="1473409467438" duration="3724000" />
+      <workItem from="1473653357070" duration="11065000" />
+      <workItem from="1473667967265" duration="637000" />
+      <workItem from="1473668625287" duration="35000" />
+      <workItem from="1475904293693" duration="2228000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="300179000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="54" y="-8" width="1554" height="916" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16254877" sideWeight="0.5415118" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16254877" sideWeight="0.45848823" order="0" side_tool="false" content_ui="combo" x="697" y="46" width="268" height="807" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15084526" sideWeight="0.5080545" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28996283" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1592978" sideWeight="0.48451054" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1833953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40644363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://E:/MyTemplate/dist/s.html" />
+    <entry file="file://E:/MyTemplate/dist/ss.html" />
+    <entry file="file://E:/MyTemplate/dist/template.html" />
+    <entry file="file://E:/MyTemplate/dist/s.html" />
+    <entry file="file://E:/MyTemplate/dist/test.html" />
+    <entry file="file://$PROJECT_DIR$/src/js/ie/IE7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4752">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/MyTemplate/dist/template.html" />
+    <entry file="http://www.baidu.com">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/src/sass/layout/_mediaQuery.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="215" column="3" selection-start-line="215" selection-start-column="3" selection-end-line="215" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/utils/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/utils/_placeholders.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/base/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/base/_normalize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9240">
+          <caret line="514" column="17" selection-start-line="514" selection-start-column="17" selection-end-line="514" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/utils/_function.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="37" column="138" selection-start-line="37" selection-start-column="138" selection-end-line="37" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/helpers/_helpers.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/test/css/sprite-sp.css" />
+    <entry file="file://$PROJECT_DIR$/dist/sp/sprite-icon.png" />
+    <entry file="file://$PROJECT_DIR$/dist/sprite/sprite-icon.png" />
+    <entry file="file://$PROJECT_DIR$/dist/test/css/sp2.css" />
+    <entry file="file://$PROJECT_DIR$/dist/test/css/sp.css" />
+    <entry file="file://$PROJECT_DIR$/src/css/sp2.css" />
+    <entry file="file://$PROJECT_DIR$/src/css/sp.css" />
+    <entry file="file://$PROJECT_DIR$/src/header.html" />
+    <entry file="file://$PROJECT_DIR$/src/img/Banner.png" />
+    <entry file="file://$PROJECT_DIR$/dist/img/Banner.png" />
+    <entry file="file://$PROJECT_DIR$/src/img/a.jpg" />
+    <entry file="file://$PROJECT_DIR$/dist/img/a.jpg" />
+    <entry file="file://$PROJECT_DIR$/dist/css/sprite-index.css" />
+    <entry file="file://$PROJECT_DIR$/dist/img/CheJian.png" />
+    <entry file="file://$PROJECT_DIR$/dist/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/dist/img/sprite-icon.png" />
+    <entry file="file://$PROJECT_DIR$/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/sass/utils/_variablesCustom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/modules/_button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/img/c_sp.png" />
+    <entry file="file://$PROJECT_DIR$/src/img/CheJian.png" />
+    <entry file="file://$PROJECT_DIR$/src/img/b_sp.png" />
+    <entry file="file://$PROJECT_DIR$/src/img/a_sp.png" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/layout/_grid.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/utils/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/modules/_form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/include/_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <marker date="1475906478019" expanded="true" signature="901:1023" ph="..." />
+            <marker date="1475906478019" expanded="true" signature="1024:1421" ph="..." />
+            <marker date="1475906478019" expanded="true" signature="1118:1150" ph="..." />
+            <marker date="1475906478019" expanded="true" signature="1231:1263" ph="..." />
+            <marker date="1475906478019" expanded="true" signature="1351:1383" ph="..." />
+            <marker date="1475906478019" expanded="true" signature="1418:1421" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <marker date="1475906292583" expanded="true" signature="901:1023" ph="..." />
+            <marker date="1475906292583" expanded="true" signature="1024:1421" ph="..." />
+            <marker date="1475906292583" expanded="true" signature="1118:1150" ph="..." />
+            <marker date="1475906292583" expanded="true" signature="1231:1263" ph="..." />
+            <marker date="1475906292583" expanded="true" signature="1351:1383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/include/_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

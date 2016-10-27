@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+//所用被禁用的元素样式
+[disabled] {
+    @include disabled();
+
+}
+
+//input, select, textarea {
+//    border: 1px solid #c7c7c7;
+//    transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+//    outline: 0;
+//    border-radius: 3px;
+//    &:focus {
+//        border-color: #66afe9;
+//        outline: 0;
+//        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+//        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+//    }
+//}
+//
+//input[type="checkbox"] {
+//    appearance: none;
+//    -webkit-appearance: none;
+//    display: inline-block;
+//    font-size: inherit;
+//    width: 1.5em;
+//    height: 1.5em;
+//    background-color: transparent;
+//    -webkit-box-sizing: border-box;
+//    -moz-box-sizing: border-box;
+//    box-sizing: border-box;
+//    border: .15em solid #c7c7c7;
+//    border-radius: 20%;
+//    vertical-align: middle;
+//    cursor: pointer;
+//    @at-root #{&}:after{
+//        content:"";
+//        color:#c7c7c7;
+//        transition: color .5s ease-in-out;
+//    }
+//    @at-root #{&}:checked {
+//        border-color: #66afe9;
+//        @at-root #{&}:after {
+//            content: "✔";
+//            color: #66afe9;
+//            font-size: 1.5em;
+//            line-height: 100%;
+//            height: 100%;
+//            display: block;
+//        }
+//    }
+//}
+//
+//input[type="radio"] {
+//    appearance: none;
+//    -webkit-appearance: none;
+//    display: inline-block;
+//    font-size: inherit;
+//    width: 1.6em;
+//    height: 1.6em;
+//    border-radius: 50%;
+//    background-color: transparent;
+//    -webkit-box-sizing: border-box;
+//    -moz-box-sizing: border-box;
+//    border: .15em solid #c7c7c7;
+//    vertical-align: middle;
+//    cursor: pointer;
+//    position: relative;
+//    @at-root #{&}:after{
+//        content:"";
+//        background-color:#c7c7c7;
+//        transition: background-color .5s ease-in-out;
+//    }
+//    @at-root #{&}:checked {
+//        border-color: #66afe9;
+//        @at-root #{&}:after {
+//            content: "";
+//            display: block;
+//            width: .8em;
+//            height: .8em;
+//            background-color: #66afe9;
+//            border-radius: 50%;
+//            position: absolute;
+//            top:50%;
+//            left:50%;
+//            margin-left:-.4em;
+//            margin-top:-.4em;
+//        }
+//    }
+//}
