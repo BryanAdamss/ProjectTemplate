@@ -46,5 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Ignore node_modules
-/node_modules/
+# 忽略所有node_modules文件夹,若需要忽略当前目录下的node_modules,则/node_modules/
+node_modules/
