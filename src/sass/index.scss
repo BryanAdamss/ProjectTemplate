@@ -11,7 +11,6 @@
 @import "utils/_placeholders";
 // 导入normalize
 @import "base/_normalize";
-
 @include normalize();
 // 导入排版样式
 @import "base/_typography";
@@ -24,7 +23,6 @@
 @import "modules/_button";
 @import "modules/_form";
 // 页面具体样式
-
 // 设置基本字体
 html {
     @include htmlFont();
@@ -33,7 +31,7 @@ html {
 //设置sticky-footer
 @include stickyFooter(60px);
 // 设置网格
-.Wp {
+.Grid {
     @include wrapper();
     @at-root #{&}-row {
         background-color: #ccc;
