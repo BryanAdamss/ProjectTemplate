@@ -1,9 +1,14 @@
 @charset "UTF-8";
-
 //所用被禁用的元素样式
 [disabled] {
     @include disabled();
+}
 
+// 去除input在chrome下自动填充的黄色
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
 //input, select, textarea {
