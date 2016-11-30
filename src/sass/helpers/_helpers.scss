@@ -8,7 +8,7 @@
 }
 
 .u-textRight {
-    text-align: center;
+    text-align: right;
 }
 
 .u-textLowercase {
@@ -23,14 +23,14 @@
     text-transform: capitalize;
 }
 
-.imgWp{
-    @at-root #{&} > img{
+.imgWp {
+    @at-root #{&} > img {
         display: block;
-        margin:0 auto;
-        width:100%;
+        margin: 0 auto;
+        width: 100%;
         height: 100%;
     }
-    @at-root a#{&}{
+    @at-root a#{&} {
         @include inline-block();
     }
 }
