@@ -3,7 +3,6 @@
 // grid scss
 // 支持固定宽度和百分比宽度,可以控制是否输出span的class
 //-----------------------------------------------------
-
 // 我这里设计的是个小屏幕100%宽，max-width:1260px
 // (85+20)*12=1260
 //-----------------------------------------------------
@@ -11,14 +10,12 @@ $gridColumns: 12 !default; // 总栅格数,默认为12栏
 $gridColumnWidth: 85px !default; // column,单栏宽度,默认为85px
 $gridGutter: 20px !default; // 栏之间的间隙,默认为20px
 $gridSystemWidth: $gridColumns * ($gridColumnWidth + $gridGutter); //整体总宽度为$gridColumns * ($gridColumnWidth + $gridGutter)=(85+20)*12=1260
-
 // percent layout setting
 // 百分比布局的变量设置
 //-----------------------------------------------------
 $gridPercentSwitch: true !default; // 百分比固定切换开关.默认为百分比布局,设置false为固定
 $gridRealWidth: $gridSystemWidth !default; //整体实际宽度,默认为$gridSystemWidth(1260px),如果是流体布局则为100%
 $gridGutterPercent: percentage($gridGutter / $gridSystemWidth) !default; //沟槽百分比=沟槽固定宽度/网格系统宽度=20/1260=1.5873%
-
 @if $gridPercentSwitch {
     //如果启用百分比布局,则网格实际宽度为100%
     $gridRealWidth: 100%;
@@ -29,13 +26,11 @@ $gridGutterPercent: percentage($gridGutter / $gridSystemWidth) !default; //沟�
 //可参考:http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 $gridMinWidth: 1260 !default; //最小宽度,默认值为固定的整体宽度1000px
 $gridCorrection: 0.5 / $gridMinWidth * 100 * 1%; //调整比例,值为:0.5 / $gridMinWidth * 100 * 1%
-
 // margin value
 //-----------------------------------------------------
 //如果为固定宽度布局则为$gridGutter,否则为$gridGutterPercent
 //if()三目判断
 $gridMarginValue: if($gridPercentSwitch, $gridGutterPercent, $gridGutter) !default;
-
 //是否开启grid class(.span1, .span2...),默认开启
 // ----------------------------------------
 $gridSpanSwitch: true !default;
@@ -54,7 +49,7 @@ $gridSpanSwitch: true !default;
     // 设置一个默认返回值
     $return: (($gridColumnWidth + $gridGutter) * $i / $gridSystemWidth) * $gridRealWidth - $subtract !default;
     // 会在默认返回值的基础上减去一个间隙(20px)
-    @if $onlyInnerWidth == true {
+    @if $onlyInnerWidth==true {
         $return: ((($gridColumnWidth + $gridGutter) * $i - $gridGutter) / $gridSystemWidth) * $gridRealWidth - $subtract;
     }
     @return $return;
@@ -65,7 +60,7 @@ $gridSpanSwitch: true !default;
 //第一,三,四参数和上面的getWidth一样,至于第二个参数表示所要占的容器栏数。如一个3栏子元素占6栏的父元素的百分比。这个一般用于百分比布局。
 @function getPercent($i, $container-columns:$gridColumns, $onlyInnerWidth:true, $subtract:0) {
     $percentage: percentage($i / $container-columns);
-    @if $onlyInnerWidth == true {
+    @if $onlyInnerWidth==true {
         $width: $i * $gridColumnWidth + ($i - 1) * $gridGutter;
         $container-width: $container-columns * $gridColumnWidth + ($container-columns - 1) * $gridGutter;
         $percentage: percentage($width / $container-width);
@@ -83,7 +78,6 @@ $gridSpanSwitch: true !default;
         //修复ie7以下并是百分比布局时的取值策略bug
         *margin-left: ($gridMarginValue/2) - $gridCorrection;
         *margin-right: ($gridMarginValue/2) - $gridCorrection;
-
     }
 }
 
@@ -102,7 +96,7 @@ $gridSpanSwitch: true !default;
     // 手动设置最大宽度1260px
     max-width: 1260px;
     // 设置居中
-    @if $center == true {
+    @if $center==true {
         margin-left: auto;
         margin-right: auto;
     }
@@ -145,7 +139,7 @@ $gridSpanSwitch: true !default;
 //-----------------------------------------------------
 @if $gridSpanSwitch {
     @for $i from 1 through $gridColumns {
-        .Wp-col#{$i} {
+        .Grid-col#{$i} {
             @include float();
             @extend %margin-gutter;
             width: getWidth($i);
