@@ -1,26 +1,26 @@
 @charset "UTF-8";
 .u-fontBold {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .u-textCenter {
-    text-align: center;
+    text-align: center !important;
 }
 
 .u-textRight {
-    text-align: right;
+    text-align: right !important;
 }
 
 .u-textLowercase {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
 }
 
 .u-textUppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 .u-textCapitalize {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
 }
 
 .imgWp {
