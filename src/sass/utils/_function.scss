@@ -25,6 +25,7 @@
 @function calc-percent( $target, $context ) {
     @return $target / $context * 100%;
 }
+
 //黄金比例确切值为(√5-1)/2=0.618033,
 //(a+b)/a=a/b;->a=1.618*b;b=0.618*a;
 //黄金分割奇妙之处，在于其比例与其倒数是一样的。例如：1.618的倒数是0.618，而1.618:1与1:0.618是一样的。
@@ -38,11 +39,16 @@
 //公式lineHeight=fontSize*lineHeightRatio=fontSize*goldenRatio-(1/(2*goldenRatio))*(1-(width/(fontSize*goldenRatio)*(fontSize*goldenRatio)))
 $goldenRatio: 1.618033 !default;
 @function calcLineH($fontSize,$width) {
-    @return floor($fontSize*($goldenRatio -(1/(2*$goldenRatio))*(1-($width/($fontSize*$goldenRatio*$fontSize*$goldenRatio)))))px;
+    @return floor($fontSize*($goldenRatio -(1/(2*$goldenRatio))*(1-($width/($fontSize*$goldenRatio*$fontSize*$goldenRatio))))) px;
 }
 
 //给定字体大小fontSize和lineHeight,求实际宽度width
 //公式width=widthOptimal*(1+2*goldenRatio((lineHeight/fontSize)-goldenRatio))
 @function calcW($fontSize,$lineHeight) {
-    @return floor(($fontSize*$goldenRatio*$fontSize*$goldenRatio)*(1+2*$goldenRatio*(($lineHeight/$fontSize)-$goldenRatio)))px;
+    @return floor(($fontSize*$goldenRatio*$fontSize*$goldenRatio)*(1+2*$goldenRatio*(($lineHeight/$fontSize)-$goldenRatio))) px;
+}
+
+// px转rem
+@function px2rem($px) {
+    @return $px/($designWidth/10)*1rem;
 }
