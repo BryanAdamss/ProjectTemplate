@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 // 选择文本样式
 @mixin selection($bgColor:#e74c3c, $color:#ecf0f1) {
     ::selection {
@@ -81,15 +80,17 @@
 @mixin htmlFont($pageType:PC) {
     @if (unquote($pageType)==PC) {
         font: $baseFontPC;
-    } @else if (unquote($pageType)==M) {
+    }
+    @else if (unquote($pageType)==M) {
         font: $baseFontMobile;
-    } @else {
+    }
+    @else {
         font: $baseFontMobileRem;
     }
 }
 
 // 表单禁用样式
-@mixin disabled($bgColor: #e6e6e6,$textColor:#ababab) {
+@mixin disabled($bgColor: #e6e6e6, $textColor:#ababab) {
     background-color: $bgColor !important;
     color: $textColor !important;
     cursor: not-allowed !important;
@@ -110,10 +111,11 @@
 }
 
 // 设置黑色半透明背景
-@mixin bgAlpha($bgcolor: rgba(0,0,0,.5)) {
+@mixin bgAlpha($bgcolor: rgba(0, 0, 0, .5)) {
     @if $filter {
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
-    } @else {
+    }
+    @else {
         background-color: #333;
     }
     background-color: $bgcolor;
@@ -121,10 +123,11 @@
 
 // 文本截取(单行、多行,截取宽度)
 @mixin ellipsis($line: 1, $substract: 0) {
-    @if $line == 1 {
+    @if $line==1 {
         white-space: nowrap;
         text-overflow: ellipsis;
-    } @else {
+    }
+    @else {
         display: -webkit-box;
         -webkit-line-clamp: $line;
         -webkit-box-orient: vertical;
@@ -134,8 +137,9 @@
 }
 
 // stickyFooter
-@mixin stickyFooter($footerH,$wp:unquote(".StickyWp"),$content:unquote(".Sticky-content"),$footer:unquote(".Sticky-footer")) {
-    html, body {
+@mixin stickyFooter($footerH, $wp:unquote(".StickyWp"), $content:unquote(".Sticky-content"), $footer:unquote(".Sticky-footer")) {
+    html,
+    body {
         height: 100%;
     }
     #{$wp} {
@@ -160,12 +164,25 @@
 //设置inline-block
 @mixin inline-block($alignment: middle) {
     display: inline-block;
-    @if $alignment and $alignment != none {
+    @if $alignment and $alignment !=none {
         vertical-align: $alignment;
     }
     @if $lte7 {
         *vertical-align: auto;
         *zoom: 1;
         *display: inline;
+    }
+}
+
+// 设置字体大小
+@mixin fontSize($px) {
+    [data-dpr="1"] & {
+        font-size: $px/2;
+    }
+    [data-dpr="2"] & {
+        font-size: $px;
+    }
+    [data-dpr="3"] & {
+        font-size: $px*1.5;
     }
 }
