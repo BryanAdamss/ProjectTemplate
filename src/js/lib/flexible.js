@@ -1,4 +1,4 @@
-// 使用flexible.js后无需设置viewport元标签
+/*移动端失配,使用flexible.js后无需设置viewport元标签*/
 ;
 (function (win, lib) {
     var doc = win.document;

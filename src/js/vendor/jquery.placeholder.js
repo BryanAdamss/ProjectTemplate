@@ -1,5 +1,5 @@
 /*!
- * jQuery Placeholder Plugin v2.3.1
+ * jQuery Placeholder Plugin v2.3.1-修复IE9及以下表单不支持placeholder
  * https://github.com/mathiasbynens/jquery-placeholder
  *
  * Copyright 2011, 2015 Mathias Bynens

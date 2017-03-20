@@ -1,6 +1,6 @@
 /*!
 
-Holder - client side image placeholders
+Holder - 客户端图片占位服务
 Version 2.9.4+cabil
 © 2016 Ivan Malopinsky - http://imsky.co
 

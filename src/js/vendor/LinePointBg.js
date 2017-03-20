@@ -1,3 +1,4 @@
+/*点线背景*/
 try {
     if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 
