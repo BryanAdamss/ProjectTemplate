@@ -346,7 +346,8 @@ select:-webkit-autofill {
 html {
   font: 16px/1.625 arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 .StickyWp {

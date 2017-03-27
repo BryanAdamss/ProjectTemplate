@@ -29,14 +29,27 @@
         您使用的IE浏览器版本过低，本站不再支持，<a href="http://windows.microsoft.com/" target="_blank" style="color:red;text-decoration: none;">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/chrome/" target="_blank" style="color:red;text-decoration: none;">GoogleChrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank" style="color:red;text-decoration: none;">Firefox</a>等高级浏览器，将会得到更好的体验！
     </p>
     <![endif]-->
-<div class="StickyWp">
-    <div class="Header">头部</div>
-    <div class="Sticky-content">
-    内容
+
+    <div class="StickyWp">
+        <div class="Header">头部</div>
+        <div class="Sticky-content">
+            内容
+        </div>
+        <div class="Sticky-footer">页脚</div>
     </div>
-    <div class="Sticky-footer">页脚</div>
-</div>
-<!-- 公用的页脚 -->
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/modernizr-3.3.1.min.js"></script>
+    <script src="js/lib/ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script src="js/lib/handlebars-4.0.5.min.js"></script>
+    <script src="js/lib/mock-min.js"></script>
+
+    <!-- 公用的页脚 -->
 <!-- 公用的页脚 end -->
 </body>
 </html>

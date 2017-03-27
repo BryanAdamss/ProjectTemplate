@@ -2,16 +2,16 @@
 // 默认变量
 // 开关设置
 //-----------------------------------------------------
-$lte7: true; //是否兼容ie6-7
-$filter: true; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
+$lte7: false; //是否兼容ie6-7
+$filter: false; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
 $printStyleSwitch: false; //是否开启打印样式
 
 // font相关
 //-----------------------------------------------------
 // html基础字体样式及大小
 $baseFontPC: 16px/1.625 arial,\5b8b\4f53,"Hiragino Sans GB", "Microsoft YaHei",sans-serif; //PC端,$pageType为PC
-$baseFontMobile: 16px/1.5 -apple-system, BlinkMacSystemFont,"Helvetica Neue", Helvetica, STHeiTi, sans-serif; //移动端固定字体大小,$pageType为M
-$baseFontMobileRem: 5vw/1.5 -apple-system, BlinkMacSystemFont,"Helvetica Neue", Helvetica, STHeiTi, sans-serif; //移动端基于视口的字体大小,$pageType为MR
+$baseFontMobile: 16px/1.5 -apple-system-font, BlinkMacSystemFont,"Helvetica Neue", Helvetica, STHeiTi, sans-serif; //移动端固定字体大小,$pageType为M
+$baseFontMobileRem: 5vw/1.5 -apple-system-font, BlinkMacSystemFont,"Helvetica Neue", Helvetica, STHeiTi, sans-serif; //移动端基于视口的字体大小,$pageType为MR
 // 常用字体
 $fontSong: \5b8b\4f53; //宋体
 $fontYaHei: "Microsoft YaHei";//微软雅黑
