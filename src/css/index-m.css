@@ -1,9 +1,9 @@
 @charset "UTF-8";
-.Grid-row:before, .Grid-row:after {
+.Grid-row:before, .DoubleWing:before, .Grid-row:after, .DoubleWing:after {
   content: "";
   display: table; }
 
-.Grid-row:after {
+.Grid-row:after, .DoubleWing:after {
   clear: both;
   overflow: hidden; }
 
@@ -14799,3 +14799,21 @@ body {
   margin-right: auto; }
   .Grid-row {
     background-color: #ccc; }
+
+.DoubleWing-main {
+  float: left;
+  width: 100%; }
+
+.DoubleWing-mainInner {
+  margin-left: 100px;
+  margin-right: 200px; }
+
+.DoubleWing-left {
+  float: left;
+  width: 100px;
+  margin-left: -100%; }
+
+.DoubleWing-right {
+  float: left;
+  width: 200px;
+  margin-left: -200px; }

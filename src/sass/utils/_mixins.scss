@@ -80,11 +80,9 @@
 @mixin htmlFont($pageType:PC) {
     @if (unquote($pageType)==PC) {
         font: $baseFontPC;
-    }
-    @else if (unquote($pageType)==M) {
+    } @else if (unquote($pageType)==M) {
         font: $baseFontMobile;
-    }
-    @else {
+    } @else {
         font: $baseFontMobileRem;
     }
 }
@@ -114,8 +112,7 @@
 @mixin bgAlpha($bgcolor: rgba(0, 0, 0, .5)) {
     @if $filter {
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
-    }
-    @else {
+    } @else {
         background-color: #333;
     }
     background-color: $bgcolor;
@@ -126,8 +123,7 @@
     @if $line==1 {
         white-space: nowrap;
         text-overflow: ellipsis;
-    }
-    @else {
+    } @else {
         display: -webkit-box;
         -webkit-line-clamp: $line;
         -webkit-box-orient: vertical;
@@ -174,7 +170,7 @@
     }
 }
 
-// 设置字体大小
+// 设置移动端不同dpr屏幕下的字体大小
 @mixin fontSize($px) {
     [data-dpr="1"] & {
         font-size: $px/2;
@@ -184,5 +180,30 @@
     }
     [data-dpr="3"] & {
         font-size: $px*1.5;
+    }
+}
+
+// 设置双飞翼布局
+@mixin DoubleWing($leftWidth,$rightWidth) {
+    .DoubleWing {
+        @include clearfix();
+        @at-root #{&}-main {
+            @include float();
+            width: 100%;
+        }
+        @at-root #{&}-mainInner {
+            margin-left: $leftWidth+px;
+            margin-right: $rightWidth+px;
+        }
+        @at-root #{&}-left {
+            @include float();
+            width: $leftWidth+px;
+            margin-left: -100%;
+        }
+        @at-root #{&}-right {
+            @include float();
+            width: $rightWidth+px;
+            margin-left: -$rightWidth+px;
+        }
     }
 }
