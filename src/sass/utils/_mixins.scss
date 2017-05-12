@@ -80,9 +80,11 @@
 @mixin htmlFont($pageType:PC) {
     @if (unquote($pageType)==PC) {
         font: $baseFontPC;
-    } @else if (unquote($pageType)==M) {
+    }
+    @else if (unquote($pageType)==M) {
         font: $baseFontMobile;
-    } @else {
+    }
+    @else {
         font: $baseFontMobileRem;
     }
 }
@@ -112,7 +114,8 @@
 @mixin bgAlpha($bgcolor: rgba(0, 0, 0, .5)) {
     @if $filter {
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
-    } @else {
+    }
+    @else {
         background-color: #333;
     }
     background-color: $bgcolor;
@@ -123,7 +126,8 @@
     @if $line==1 {
         white-space: nowrap;
         text-overflow: ellipsis;
-    } @else {
+    }
+    @else {
         display: -webkit-box;
         -webkit-line-clamp: $line;
         -webkit-box-orient: vertical;
@@ -154,6 +158,7 @@
     #{$footer} {
         position: absolute;
         bottom: 0;
+        width: 100%;
     }
 }
 
@@ -184,7 +189,7 @@
 }
 
 // 设置双飞翼布局
-@mixin DoubleWing($leftWidth,$rightWidth) {
+@mixin DoubleWing($leftWidth, $rightWidth) {
     .DoubleWing {
         @include clearfix();
         @at-root #{&}-main {
@@ -205,5 +210,19 @@
             width: $rightWidth+px;
             margin-left: -$rightWidth+px;
         }
+    }
+}
+
+// 针对ie8设置样式
+@mixin ie8() {
+    .ie8 & {
+        @content;
+    }
+}
+
+// 针对ie9设置样式
+@mixin ie9() {
+    .ie9 & {
+        @content;
     }
 }

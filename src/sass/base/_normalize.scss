@@ -3,7 +3,7 @@
 @mixin normalize() {
     @if $lte7 {
         /*! normalize.css v1.1.3 | MIT License | git.io/normalize
-        支持IE6+,删除h1~h6
+        支持IE6+,删除h1~h6,删除a标签默认边框
         */
         article,
         aside,
@@ -51,16 +51,6 @@
 
         body {
             margin: 0;
-        }
-
-        a {
-            &:focus {
-                outline: thin dotted;
-            }
-            &:active,
-            &:hover {
-                outline: 0;
-            }
         }
 
         abbr[title] {

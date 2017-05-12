@@ -5,7 +5,7 @@
 $lte7: true; //是否兼容ie6-7
 $filter: true; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景
 $printStyleSwitch: false; //是否开启打印样式
-
+$gridSetMaxWidth:false;// 是否设置网格的最大宽度
 // font相关
 //-----------------------------------------------------
 // html基础字体样式及大小
@@ -32,6 +32,3 @@ $baseFontSize: 16px;
 $baseGap: 20px;
 // 行高
 $baseLineH:26px;
-
-// 设计图尺寸，用于px2rem
-$designWidth:640px;

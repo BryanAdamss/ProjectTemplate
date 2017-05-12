@@ -10,6 +10,7 @@ $gridColumns: 12 !default; // 总栅格数,默认为12栏
 $gridColumnWidth: 85px !default; // column,单栏宽度,默认为85px
 $gridGutter: 20px !default; // 栏之间的间隙,默认为20px
 $gridSystemWidth: $gridColumns * ($gridColumnWidth + $gridGutter); //整体总宽度为$gridColumns * ($gridColumnWidth + $gridGutter)=(85+20)*12=1260
+$gridSetMaxWidth:true !default; // 是否设置网格的最大宽度(max-width)为$gridSystemWidth，默认为true，设置最大宽度
 // percent layout setting
 // 百分比布局的变量设置
 //-----------------------------------------------------
@@ -93,8 +94,10 @@ $gridSpanSwitch: true !default;
     $getWrapperWidth: getWidth($i, false);
     $wrapperWidth: $getWrapperWidth - $subtract;
     width: $wrapperWidth;
-    // 手动设置最大宽度1260px
-    max-width: 1260px;
+    // 设置最大宽度
+    @if ($gridSetMaxWidth) {
+        max-width: $gridSystemWidth;
+    }
     // 设置居中
     @if $center==true {
         margin-left: auto;

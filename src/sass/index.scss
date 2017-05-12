@@ -37,4 +37,14 @@ html {
         background-color: #ccc;
     }
 }
-
+body{
+    background-color: yellow;
+    // 针对IE8的body单独设置样式
+    @include ie8(){
+        background-color: blue;
+    };
+    // 针对IE9的body单独设置样式
+    @include ie9(){
+        background-color: red;
+    };
+}
