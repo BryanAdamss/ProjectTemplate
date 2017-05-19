@@ -14790,7 +14790,8 @@ body {
 
 .Sticky-footer {
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  width: 100%; }
 
 .Grid {
   width: 100%;

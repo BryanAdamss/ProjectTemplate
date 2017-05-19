@@ -42,10 +42,10 @@ gulp.task('sass-c', function () {
 });
 
 // postcss
-gulp.task('postcss', function () {
+gulp.task('css-prefix', function () {
     //autoprefixer
     var processors = [autoprefixer({
-        browsers: ['last 2 versions', 'ie 6-8', '> 1% in CN']
+        browsers: ['android>=4.0','ios>=7.0','ie>=8','> 1% in CN']
     })];
     return gulp.src('src/css/*.css')
         .pipe(postcss(processors))
