@@ -1,4 +1,4 @@
-@import "_header_m.html"
+@import "_header.html"
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <body>
@@ -8,9 +8,7 @@
         <div class="Sticky-content">
             内容
         </div>
-        <div class="Sticky-footer">页脚
-        <input type="text" placeholder="我是用来测试input被遮挡的" id="footerInput">
-        </div>
+        <div class="Sticky-footer">页脚</div>
     </div>
     <!--双飞翼布局-->
     <div class="DoubleWing">
@@ -29,20 +27,4 @@
 
     <script src="js/vendor/mobiscroll-2.17.0.min.js"></script>
     <script src="js/vendor/mobiscroll.i18n.zh.js"></script>
-
-    <script>
-        var oFooterInput=document.querySelector('#footerInput');
-        var bfscrolltop = document.body.scrollTop;
-        var timer = null;
-        oFooterInput.onfocus=function(){
-            timer=setInterval(function(){
-                document.body.scrollTop = document.body.scrollHeight;
-            },100);
-        };
-        oFooterInput.onblur=function(){
-            clearInterval(timer);
-            document.body.scrollTop = bfscrolltop;
-        };
-    </script>
-
-    @import "_footer_m.html"
+    @import "_footer.html"

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<!--[if IE 8]><html class="ie8" lang="zh-cmn-Hans"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="zh-cmn-Hans"><![endif]-->
+<!--[if !IE]><!--><html lang="zh-cmn-Hans"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
@@ -10,11 +12,13 @@
     <meta content="telephone=no,email=no" name="format-detection"/>
     <meta name="full-screen" content="yes">
     <meta name="x5-fullscreen" content="true">
-    <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
             content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
     <title>我是标题</title>
     <link rel="icon" href="favicon.ico">
+    <!--设置页面链接的默认在新页面打开,base还能通过href特性来设置默认路径-->
+    <base target="_blank">
+
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <body>
@@ -24,9 +28,7 @@
         <div class="Sticky-content">
             内容
         </div>
-        <div class="Sticky-footer">页脚
-        <input type="text" placeholder="我是用来测试input被遮挡的" id="footerInput">
-        </div>
+        <div class="Sticky-footer">页脚</div>
     </div>
     <!--双飞翼布局-->
     <div class="DoubleWing">
@@ -45,22 +47,6 @@
 
     <script src="js/vendor/mobiscroll-2.17.0.min.js"></script>
     <script src="js/vendor/mobiscroll.i18n.zh.js"></script>
-
-    <script>
-        var oFooterInput=document.querySelector('#footerInput');
-        var bfscrolltop = document.body.scrollTop;
-        var timer = null;
-        oFooterInput.onfocus=function(){
-            timer=setInterval(function(){
-                document.body.scrollTop = document.body.scrollHeight;
-            },100);
-        };
-        oFooterInput.onblur=function(){
-            clearInterval(timer);
-            document.body.scrollTop = bfscrolltop;
-        };
-    </script>
-
     <!-- 公用的页脚 -->
 <!-- 公用的页脚 end -->
 </body>

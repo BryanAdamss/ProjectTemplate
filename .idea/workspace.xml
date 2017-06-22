@@ -24,28 +24,7 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index-m.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/html/index-m.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="45" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-m.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index-m.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +39,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/sp.css" />
         <option value="$PROJECT_DIR$/dist/test/css/sp.css" />
         <option value="$PROJECT_DIR$/src/test/sp2.css" />
         <option value="$PROJECT_DIR$/src/test/sp.css" />
@@ -92,7 +72,9 @@
         <option value="$PROJECT_DIR$/src/sass/vendors/_weui-1.1.1.scss" />
         <option value="$PROJECT_DIR$/src/sass/vendors/_mobiscroll-2.17.0.scss" />
         <option value="$PROJECT_DIR$/src/sass/utils/_variablesCustom.scss" />
+        <option value="$PROJECT_DIR$/src/index-m.html" />
         <option value="$PROJECT_DIR$/src/css/index-m.css" />
+        <option value="$PROJECT_DIR$/src/html/index-m.html" />
         <option value="$PROJECT_DIR$/src/sass/index-m.scss" />
         <option value="$PROJECT_DIR$/src/sass/base/_normalize.scss" />
         <option value="$PROJECT_DIR$/src/js/ie/selectivizr.js" />
@@ -108,9 +90,6 @@
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/css/index.css" />
         <option value="$PROJECT_DIR$/src/sass/index.scss" />
-        <option value="$PROJECT_DIR$/src/html/include/_header_m.html" />
-        <option value="$PROJECT_DIR$/src/html/index-m.html" />
-        <option value="$PROJECT_DIR$/src/index-m.html" />
       </list>
     </option>
   </component>
@@ -411,19 +390,19 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="http://www.baidu.com" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProjectTemplate\src\js\vendor" />
+      <recent name="E:\ProjectTemplate\src\js\lib" />
+      <recent name="E:\ProjectTemplate\src\js\ie" />
+      <recent name="E:\ProjectTemplate\src\sass\utils" />
+      <recent name="E:\ProjectTemplate\src\sass" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ProjectTemplate\src\js\vendor" />
       <recent name="E:\ProjectTemplate\src\js\lib" />
       <recent name="E:\SourceSave\GulpTemplate\src\html" />
       <recent name="E:\SourceSave\GulpTemplate\src" />
       <recent name="E:\SourceSave\GulpTemplate\src\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ProjectTemplate\src\html\include" />
-      <recent name="E:\ProjectTemplate\src\js\vendor" />
-      <recent name="E:\ProjectTemplate\src\js\lib" />
-      <recent name="E:\ProjectTemplate\src\js\ie" />
-      <recent name="E:\ProjectTemplate\src\sass\utils" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.CheJianZhanXinXi.html">
@@ -571,12 +550,11 @@
       <workItem from="1495186136362" duration="1758000" />
       <workItem from="1495192632783" duration="1632000" />
       <workItem from="1495637437548" duration="83000" />
-      <workItem from="1498137145032" duration="436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337790000" />
+    <option name="totallyTimeSpent" value="337354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,23 +569,23 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20828848" sideWeight="0.44857496" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20828848" sideWeight="0.55142504" order="0" side_tool="false" content_ui="combo" x="697" y="46" width="268" height="807" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18299246" sideWeight="0.44275582" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18299246" sideWeight="0.5572442" order="0" side_tool="false" content_ui="combo" x="697" y="46" width="268" height="807" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18237083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15084526" sideWeight="0.5080545" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28996283" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1592978" sideWeight="0.48451054" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40644363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18237083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40644363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -626,6 +604,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/js/lib/handlebars-4.0.5.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/lib/jquery-1.12.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="1" column="2076" selection-start-line="1" selection-start-column="2076" selection-end-line="1" selection-end-column="2076" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/lib/jquery-2.2.4.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -681,6 +673,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/index-m.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -839,6 +838,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index-m.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/vendor/holder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -922,37 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/include/_header_m.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/include/_footer_m.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/index-m.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="45" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index-m.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding />
         </state>
       </provider>
