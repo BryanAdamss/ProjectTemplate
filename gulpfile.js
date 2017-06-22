@@ -34,7 +34,7 @@ var gulp = require('gulp'),
     htmlImport = require('gulp-html-import');
 
 // 定义一个编译sass任务,编译完成并传给browser-sync
-gulp.task('sass-c', function () {
+gulp.task('sass-c', function() {
     //编译src/sass下的.scss,不编译子文件夹内的.scss
     return gulp.src('src/sass/**/*.scss')
         .pipe(sass())
@@ -42,10 +42,10 @@ gulp.task('sass-c', function () {
 });
 
 // postcss
-gulp.task('css-prefix', function () {
+gulp.task('css-prefix', function() {
     //autoprefixer
     var processors = [autoprefixer({
-        browsers: ['android>=4.0','ios>=7.0','ie>=8','> 1% in CN']
+        browsers: ['android>=4.0', 'ios>=7.0', 'ie>=8', '> 1% in CN']
     })];
     return gulp.src('src/css/*.css')
         .pipe(postcss(processors))
@@ -53,66 +53,66 @@ gulp.task('css-prefix', function () {
 });
 
 //雪碧图,只合并css中bg和bg-image中图片带?__icon的
-gulp.task('css-sprite', function () {
+gulp.task('css-sprite', function() {
     return sprite.run();
 });
 
 //压缩css
-gulp.task('css-min', function () {
+gulp.task('css-min', function() {
     return gulp.src('dist/css/*.css')
-        .pipe(cssmin({compatibility: 'ie8'}))
+        .pipe(cssmin({ compatibility: 'ie8' }))
         .pipe(gulp.dest('dist/css'));
 });
 
 //压缩图片,压缩dist中的sprite-*.png雪碧图和src中非雪碧图,带有_sp的为雪碧图,不带_sp的为非雪碧图,非雪碧图需压缩并保存到dist/img中
-gulp.task('img-min', function () {
+gulp.task('img-min', function() {
     return gulp.src(['dist/img/sprite-*.{jpg,png}', 'src/img/*.{jpg,png}', '!src/img/*_sp.{jpg,png}'])
-    //参数为tinypng的授权key,利用cache压缩只修改过的图片
+        //参数为tinypng的授权key,利用cache压缩只修改过的图片
         .pipe(cache(tinypng('vEMkpXIEqlJaMsh8xgi0D3VnaFxIobA8')))
         .pipe(gulp.dest('dist/img'));
 });
 
 //压缩js
-gulp.task('js-min', function () {
+gulp.task('js-min', function() {
     return gulp.src('src/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
 //导入html
-gulp.task('html-import', function () {
+gulp.task('html-import', function() {
     return gulp.src('src/html/*.html')
         .pipe(htmlImport('src/html/include/'))
         .pipe(gulp.dest('src/'));
 });
 
 //拷贝src下的.html到dist下
-gulp.task('html-copy', function () {
+gulp.task('html-copy', function() {
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist/'))
 });
 
 //定义一个sass监视任务
-gulp.task('watch-sass', function () {
+gulp.task('watch-sass', function() {
     gulp.watch('src/sass/**/*.scss', ['sass-c']);
 });
 
 //定义一个htmlImport监视任务
-gulp.task('watch-htmlImport', function () {
+gulp.task('watch-htmlImport', function() {
     gulp.watch('src/html/**/*.html', ['html-import']);
 });
 
 //发布css任务,编译->加前缀->雪碧图->压缩
-gulp.task('public-css', gulpSequence('sass-c','postcss','css-sprite','css-min'));
+gulp.task('public-css', gulpSequence('sass-c', 'css-prefix', 'css-sprite', 'css-min'));
 
 //发布html,先导入,再拷贝
-gulp.task('public-html', gulpSequence('html-import','html-copy'));
+gulp.task('public-html', gulpSequence('html-import', 'html-copy'));
 
 //统一发布
-gulp.task('public-all',gulpSequence('js-min', 'public-css', 'img-min','public-html'));
+gulp.task('public-all', gulpSequence('js-min', 'public-css', 'img-min', 'public-html'));
 
 //自动刷新
-gulp.task('serve', ['sass-c'], function () {
+gulp.task('serve', ['sass-c'], function() {
     browserSync.init({
         proxy: {
             target: "localhost:2332",
