@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="ie8" lang="zh-cmn-Hans"><![endif]-->
-<!--[if IE 9]><html class="ie9" lang="zh-cmn-Hans"><![endif]-->
-<!--[if !IE]><!--><html lang="zh-cmn-Hans"><!--<![endif]-->
+<html lang="zh-cmn-Hans">
 <head>
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
@@ -12,14 +10,11 @@
     <meta content="telephone=no,email=no" name="format-detection"/>
     <meta name="full-screen" content="yes">
     <meta name="x5-fullscreen" content="true">
-    <meta name="viewport"
-            content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
     <title>我是标题</title>
     <link rel="icon" href="favicon.ico">
-    <!--设置页面链接的默认在新页面打开,base还能通过href特性来设置默认路径-->
-    <base target="_blank">
-
-<link rel="stylesheet" type="text/css" href="css/index-m.css">
+    <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <body>
     <!--粘滞页脚-->
@@ -28,7 +23,9 @@
         <div class="Sticky-content">
             内容
         </div>
-        <div class="Sticky-footer">页脚</div>
+        <div class="Sticky-footer">页脚
+            <input type="text" placeholder="我是来测试input被键盘遮挡问题的" id="footer_input">
+        </div>
     </div>
     <!--双飞翼布局-->
     <div class="DoubleWing">
@@ -47,7 +44,24 @@
 
     <script src="js/vendor/mobiscroll-2.17.0.min.js"></script>
     <script src="js/vendor/mobiscroll.i18n.zh.js"></script>
+
+    <script>
+        var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
+        var oInput = document.querySelector('#footer_input');
+        var timer = null;
+        oInput.onfocus = function () { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
+            timer = setInterval(function () { //设置一个计时器，时间设置与软键盘弹出所需时间相近
+                document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+            }, 100)
+        };
+
+        oInput.onblur = function () { //设定输入框失去焦点时的事件
+            clearInterval(timer); //清除计时器
+            document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+        };
+
+    </script>
     <!-- 公用的页脚 -->
-<!-- 公用的页脚 end -->
+    <!-- 公用的页脚 end -->
 </body>
 </html>

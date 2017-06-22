@@ -1,4 +1,4 @@
-@import "_header.html"
+@import "_header_m.html"
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <body>
@@ -8,7 +8,9 @@
         <div class="Sticky-content">
             内容
         </div>
-        <div class="Sticky-footer">页脚</div>
+        <div class="Sticky-footer">页脚
+            <input type="text" placeholder="我是来测试input被键盘遮挡问题的" id="footer_input">
+        </div>
     </div>
     <!--双飞翼布局-->
     <div class="DoubleWing">
@@ -27,4 +29,21 @@
 
     <script src="js/vendor/mobiscroll-2.17.0.min.js"></script>
     <script src="js/vendor/mobiscroll.i18n.zh.js"></script>
-    @import "_footer.html"
+
+    <script>
+        var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
+        var oInput = document.querySelector('#footer_input');
+        var timer = null;
+        oInput.onfocus = function() { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
+            timer = setInterval(function() { //设置一个计时器，时间设置与软键盘弹出所需时间相近
+                document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+            }, 100)
+        };
+
+        oInput.onblur = function() { //设定输入框失去焦点时的事件
+            clearInterval(timer); //清除计时器
+            document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+        };
+
+    </script>
+    @import "_footer_m.html"
