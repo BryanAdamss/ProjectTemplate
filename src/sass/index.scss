@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 //导入自定义变量
 @import "utils/_variablesCustom";
 // 导入默认变量
@@ -11,6 +11,7 @@
 @import "utils/_placeholders";
 // 导入normalize
 @import "base/_normalize";
+
 @include normalize();
 // 导入排版样式
 @import "base/_typography";
@@ -28,8 +29,21 @@ html {
     @include htmlFont();
 }
 
+body {
+    background-color: $mainTone;
+    // 针对IE8单独设置样式
+    @include ie8() {
+        background-color: blue;
+    }
+    // 针对IE9单独设置样式
+    @include ie9() {
+        background-color: red;
+    }
+}
+
 //设置sticky-footer
 @include stickyFooter(60px);
+
 // 设置网格
 .Grid {
     @include wrapper();
@@ -37,15 +51,3 @@ html {
         background-color: #ccc;
     }
 }
-body{
-    background-color: yellow;
-    // 针对IE8的body单独设置样式
-    @include ie8(){
-        background-color: blue;
-    };
-    // 针对IE9的body单独设置样式
-    @include ie9(){
-        background-color: red;
-    };
-}
-

@@ -340,6 +340,13 @@ select:-webkit-autofill {
 html {
   font: 16px/1.625 arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
 
+body {
+  background-color: #3da4fe; }
+  .ie8 body {
+    background-color: blue; }
+  .ie9 body {
+    background-color: red; }
+
 html,
 body {
   height: 100%; }
@@ -366,10 +373,3 @@ body {
   margin-right: auto; }
   .Grid-row {
     background-color: #ccc; }
-
-body {
-  background-color: yellow; }
-  .ie8 body {
-    background-color: blue; }
-  .ie9 body {
-    background-color: red; }
