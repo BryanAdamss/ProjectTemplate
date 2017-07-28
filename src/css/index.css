@@ -304,27 +304,11 @@ table {
 .u-textRight {
   text-align: right !important; }
 
-.u-textLowercase {
-  text-transform: lowercase !important; }
+.u-textMainTone {
+  color: #3da4fe !important; }
 
-.u-textUppercase {
-  text-transform: uppercase !important; }
-
-.u-textCapitalize {
-  text-transform: capitalize !important; }
-
-.imgWp > img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%; }
-
-a.imgWp {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline; }
+.u-textSubTone {
+  color: #fe6e00 !important; }
 
 [disabled] {
   background-color: #e6e6e6 !important;
@@ -336,6 +320,49 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset; }
+
+.cgh_Carousel {
+  position: relative; }
+  .cgh_Carousel-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .cgh_Carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: none; }
+  .cgh_Carousel-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 9999;
+    font-size: 0; }
+  .cgh_Carousel-paginationItem {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color .3s ease-in-out;
+    cursor: pointer; }
+    .cgh_Carousel-paginationItem + .cgh_Carousel-paginationItem {
+      margin-left: 10px; }
+    .cgh_Carousel-paginationItem:hover {
+      background-color: #3da4fe; }
+    .cgh_Carousel-paginationItem.is-cur {
+      background-color: #3da4fe; }
 
 html {
   font: 16px/1.625 arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }

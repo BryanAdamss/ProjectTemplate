@@ -260,24 +260,11 @@ template,
 .u-textRight {
   text-align: right !important; }
 
-.u-textLowercase {
-  text-transform: lowercase !important; }
+.u-textMainTone {
+  color: #3da4fe !important; }
 
-.u-textUppercase {
-  text-transform: uppercase !important; }
-
-.u-textCapitalize {
-  text-transform: capitalize !important; }
-
-.imgWp > img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%; }
-
-a.imgWp {
-  display: inline-block;
-  vertical-align: middle; }
+.u-textSubTone {
+  color: #fe6e00 !important; }
 
 [disabled] {
   background-color: #e6e6e6 !important;

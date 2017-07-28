@@ -11,26 +11,10 @@
     text-align: right !important;
 }
 
-.u-textLowercase {
-    text-transform: lowercase !important;
+.u-textMainTone {
+    color: $mainTone !important;
 }
 
-.u-textUppercase {
-    text-transform: uppercase !important;
-}
-
-.u-textCapitalize {
-    text-transform: capitalize !important;
-}
-
-.imgWp {
-    @at-root #{&} > img {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-    }
-    @at-root a#{&} {
-        @include inline-block();
-    }
+.u-textSubTone {
+    color: $subTone !important;
 }
