@@ -1,4 +1,10 @@
 @import "_header.html"
+<!--ie8跳转，添加这个后，导入_ie.html可以去除-->
+<!--[if lte IE 8]>
+<script>
+    window.location.href='ie.html';
+</script>
+<![endif]-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <!-- IE8及以下的浏览器使用兼容补丁 -->
 <!--[if lte IE 8]>
@@ -7,9 +13,11 @@
 </head>
 
 <body>
+
     @import "_ie.html"
+
     <div class="StickyWp">
-        <div class="Header">头部</div>
+        <div class="Header animated fadeInUp">头部</div>
         <div class="Sticky-content">
             <!--轮播-->
             <div class="cgh_Carousel">
@@ -37,8 +45,14 @@
         <div class="Sticky-footer">页脚</div>
     </div>
 
+    @import "_footer.html"
+
+    <!--自定义模板 -->
     <script type="text/x-cgh-template" id="tpl_test">
         <h1><@this.text@></h1>
     </script>
+    <!--自定义模板end -->
+
     <script src="js/lib/require-2.3.3.min.js" data-main="js/index"></script>
-    @import "_footer.html"
+</body>
+</html>

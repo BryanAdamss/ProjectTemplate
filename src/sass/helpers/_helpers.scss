@@ -18,3 +18,23 @@
 .u-textSubTone {
     color: $subTone !important;
 }
+
+.u-textRtl {
+    direction: rtl !important;
+}
+
+.u-marginR {
+    margin-right: $baseGap !important;
+}
+
+.u-marginL {
+    margin-left: $baseGap !important;
+}
+
+.u-fontZero {
+    font-size: 0 !important;
+}
+
+.u-cursorPointer {
+    cursor: pointer !important;
+}
