@@ -26,10 +26,18 @@ $mainTextColor: #666 !default;
 $subTextColor: #ccc !default;
 // 边框颜色
 $baseBorderColor: #c7c7c7 !default;
+// 按钮文字颜色
+$mainButtonColor:#fff !default;
+// 辅助颜色
+$dangerColor: #a94442 !default;
+$warnningColor: #8a6d3b !default;
 // 文字大小
 $baseFontSize: 16px !default;
 // 间隙
 $baseGap: 20px !default;
-
+// 行高
+$baseLineH:26px !default;
+// 圆角
+$baseBorderRadius:3px !default;
 // 设计图尺寸，用于px2rem
 $designWidth:640px !default;

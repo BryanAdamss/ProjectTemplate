@@ -11,12 +11,12 @@
 @import "utils/_placeholders";
 // 导入normalize
 @import "base/_normalize";
-@include normalize();
 // 导入排版样式
 @import "base/_typography";
 // 导入媒体查询
 @import "layout/_mediaQuery";
-@import "layout/_grid";
+//@import "layout/_grid";// 旧网格
+@import "layout/_gridNew";
 // 导入助手样式
 @import "helpers/_helpers";
 // 导入模块
@@ -34,13 +34,15 @@ html {
 
 //设置sticky-footer
 @include stickyFooter(60px);
-// 设置网格
-.Grid {
-    @include wrapper();
-    @at-root #{&}-row {
-        background-color: #ccc;
-    }
-}
-@include DoubleWing(100,200);
+
+// 设置旧网格
+//.Grid {
+//    @include wrapper();
+//    @at-root #{&}-row {
+//        background-color: #ccc;
+//    }
+//}
+
+@include DoubleWing(100, 200);
 
 

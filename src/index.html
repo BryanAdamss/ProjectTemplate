@@ -18,13 +18,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
     <title>我是标题</title>
     <link rel="icon" href="favicon.ico">
-    <!--设置页面链接的默认在新页面打开,base还能通过href特性来设置默认路径-->
-    <base target="_blank">
+    <!--设置页面链接的默认在本页面打开,base还能通过href特性来设置默认路径-->
+    <base target="_self">
 
 <!--ie8跳转，添加这个后，导入_ie.html可以去除-->
 <!--[if lte IE 8]>
 <script>
-    window.location.href='ie.html';
+    window.location.href = 'ie.html';
 </script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -35,25 +35,25 @@
 </head>
 
 <body>
-
     <!-- IE8及以下的浏览器提示升级 -->
 <!--[if lte IE 8]>
 <p style="text-align:center;background-color:#000;color:#fff;font-size:16px;font-family:Microsoft YaHei;line-height: 2.5em;margin:0;">
     您使用的IE浏览器版本过低，本站不再支持，<a href="http://windows.microsoft.com/" target="_blank" style="color:red;text-decoration: none;">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/chrome/" target="_blank" style="color:red;text-decoration: none;">GoogleChrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank" style="color:red;text-decoration: none;">Firefox</a>等高级浏览器，将会得到更好的体验！
 </p>
 <![endif]-->
-
+    
     <div class="StickyWp">
         <div class="Header animated fadeInUp">头部</div>
         <div class="Sticky-content">
+
             <!--轮播-->
-            <div class="cgh_Carousel">
-                <ul class="cgh_Carousel-list">
-                    <li class="cgh_Carousel-item" data-href="http://www.baidu.com" data-bg="http://file.ah122.cn/upload/2017-03-22/3d5f6bec-f195-4a56-bb57-2035c638be4d.jpg">
+            <div class="c-Carousel">
+                <ul class="c-Carousel-list">
+                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://file.ah122.cn/upload/2017-03-22/3d5f6bec-f195-4a56-bb57-2035c638be4d.jpg">
                     </li>
-                    <li class="cgh_Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/Banner.png">
+                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/Banner.png">
                     </li>
-                    <li class="cgh_Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/banner-cxah-app.jpg">
+                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/banner-cxah-app.jpg">
                     </li>
                 </ul>
             </div>
@@ -68,19 +68,202 @@
                 <div class="testMoveDirInfo"></div>
             </div>
             <!--测试移入移出方向 end-->
+            <!--网格-->
+            <style>
+                .c-Row [class^="c-Row-col"] {
+                    border: 1px solid red;
+                }
+            </style>
+            <div class="c-Row">
+                <div class="c-Row-col1">1</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col2">2</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col3">3</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col4">4</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col5">5</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col6">6</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col7">7</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col8">8</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col9">9</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col10">10</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col11">11</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col12">12</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col13">13</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col14">14</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col15">15</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col16">16</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col17">17</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col18">18</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col19">19</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col20">20</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col21">21</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col22">22</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col23">23</div>
+            </div>
+            <div class="c-Row">
+                <div class="c-Row-col24">24</div>
+            </div>
+            <!--网格 end-->
+            <!--按钮-->
+            <div style="width:200px;margin:20px auto;">
+                <input type="button" value="按钮" class="c-Btn c-Btn--round" disabled>
+                <input type="submit" value="按钮" class="c-Btn c-Btn--primary" disabled>
+                <input type="reset" value="按钮" class="c-Btn c-Btn--radius">
+                <button class="c-Btn c-Btn--round" disabled>按钮</button>
+                <button type="button" class="c-Btn">按钮</button>
+                <button type="submit" class="c-Btn">按钮</button>
+                <button type="reset" class="c-Btn">按钮</button>
+                <a href="javascript:;" class="c-Btn" role="button" disabled>按钮</a>
+
+                <button type="button" class="c-BorderBtn" disabled>按钮</button>
+                <a href="javascript:;" class="c-BorderBtn c-BorderBtn--primary c-BorderBtn--round" role="button">按钮</a>
+            </div>
+            <!--按钮 end-->
+            <!--表单-->
+            <div style="width:400px;margin:20px auto;">
+                <input type="text" class="c-Field">
+                <input type="password" class="c-Field" disabled>
+
+                <textarea name="" id="" rows="5" class="c-Field"></textarea>
+                <select name="" id="" class="c-Field">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+
+                <select name="" id="" class="c-Field" multiple>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+
+                <!--上传文件，如果需要使用到c-Btn，请使用没有默认事件的标签，不要使用button、或者input形式的按钮(会有默认点击事件，无法触发label关联的file上传)-->
+                <label class="c-File">
+                    <span class="c-Btn c-Btn--radius" role="button">选择文件</span>
+                    <input type="file">
+                </label>
+                <!--radio-->
+                <label class="c-Radio">
+                    <span>男</span>
+                    <input type="radio" name="sex" disabled checked>
+                    <i class="c-Radio-icon"></i>
+                </label>
+                <label class="c-Radio">
+                    <input type="radio" name="sex">
+                    <i class="c-Radio-icon"></i>
+                    <span>女</span>
+                </label>
+                <!--checkbox-->
+                <label class="c-Checkbox">
+                    <span>游戏</span>
+                    <input type="checkbox" name="sex" disabled>
+                    <i class="c-Checkbox-icon"></i>
+                </label>
+                <label class="c-Checkbox">
+                    <input type="checkbox" name="sex">
+                    <i class="c-Checkbox-icon"></i>
+                    <span>代码</span>
+                </label>
+            </div>
+            <!--表单end-->
+            <!--layer-->
+            <div style="width:140px;margin:20px auto;">
+                <button type="button" class="c-Btn js-layer">点击弹出layer</button>
+            </div>
+            <!--layer end-->
+            <!--tab切换-->
+            <style>
+                .c-Tabs-item {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: #eee;
+                }
+
+                .c-Tabs-item.is-active {
+                    background-color: #333;
+                    color: #fff;
+                }
+
+                .c-Targets {
+                    background-color: #999;
+                }
+
+                .c-Targets-item {
+                    display: none;
+                }
+
+                .c-Targets-item.is-active {
+                    display: block;
+                }
+            </style>
+            <div class="c-Tabs">
+                <span class="c-Tabs-item is-active">1</span>
+                <span class="c-Tabs-item">2</span>
+                <span class="c-Tabs-item">3</span>
+                <span class="c-Tabs-item">4</span>
+            </div>
+            <div class="c-Targets">
+                <div class="c-Targets-item is-active">target1</div>
+                <div class="c-Targets-item">target2</div>
+                <div class="c-Targets-item">target3</div>
+                <div class="c-Targets-item">target4</div>
+            </div>
+            <!--tab切换 end-->
         </div>
         <div class="Sticky-footer">页脚</div>
     </div>
-
+    
     <!-- 公用的页脚 -->
     <h2>pc页脚</h2>
 <!-- 公用的页脚 end -->
 
     <!--自定义模板 -->
-    <script type="text/x-cgh-template" id="tpl_test">
+    <script type="text/x-c-template" id="tpl_test">
         <h1><@this.text@></h1>
     </script>
     <!--自定义模板end -->
+    
 
     <script src="js/lib/require-2.3.3.min.js" data-main="js/index"></script>
 </body>

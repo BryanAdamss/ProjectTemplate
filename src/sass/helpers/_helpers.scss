@@ -1,14 +1,47 @@
 @charset "UTF-8";
+.u-font0 {
+    font-size: 0 !important;
+}
+
+.u-fontNormal {
+    font-size: $baseFontSize !important;
+}
+
+.u-fontSmall {
+    font-size: $baseFontSize*0.875 !important;
+}
+
+.u-font0 {
+    font-size: 0 !important;
+}
+
 .u-fontBold {
     font-weight: bold !important;
 }
 
-.u-textCenter {
+.u-noUdl {
+    text-decoration: none !important;
+}
+
+.u-textL {
+    text-align: left !important;
+}
+
+.u-textC {
     text-align: center !important;
 }
 
-.u-textRight {
+.u-textR {
     text-align: right !important;
+}
+
+.u-textRtl {
+    direction: rtl !important;
+}
+
+.u-textBreak {
+    word-wrap: break-word !important;
+    word-break: break-all !important;
 }
 
 .u-textMainTone {
@@ -19,8 +52,28 @@
     color: $subTone !important;
 }
 
-.u-textRtl {
-    direction: rtl !important;
+.u-textDanger {
+    color: $dangerColor !important;
+}
+
+.u-textWarn {
+    color: $warnningColor !important;
+}
+
+.u-bgMainTone {
+    background-color: $mainTone !important;
+}
+
+.u-bgSubTone {
+    background-color: $subTone !important;
+}
+
+.u-marginT {
+    margin-top: $baseGap !important;
+}
+
+.u-marginB {
+    margin-bottom: $baseGap !important;
 }
 
 .u-marginR {
@@ -31,10 +84,18 @@
     margin-left: $baseGap !important;
 }
 
-.u-fontZero {
-    font-size: 0 !important;
-}
-
 .u-cursorPointer {
     cursor: pointer !important;
+}
+
+.u-floatL {
+    @include float();
+}
+
+.u-floatR {
+    @include float(right);
+}
+
+.u-clearfix {
+    @include clearfix();
 }
