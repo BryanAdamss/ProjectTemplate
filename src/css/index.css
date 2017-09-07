@@ -236,7 +236,7 @@ ul, ol {
     font-size: initial;
     text-align: left;
     position: relative; }
-  .c-Row--verticalAlign [class*="c-Row-col"] {
+  .c-Row--vAlign [class*="c-Row-col"] {
     vertical-align: middle; }
   .c-Row .c-Row-col1 {
     width: 4.16667%; }

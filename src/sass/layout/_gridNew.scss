@@ -25,7 +25,7 @@ $gridVerticalAlign: top !default; // 列垂直对齐方式，默认顶端对齐
         text-align: left;
         position: relative;
     }
-    @at-root #{&}--verticalAlign{
+    @at-root #{&}--vAlign{
         [class*="c-Row-col"]{
             vertical-align: middle;
         }

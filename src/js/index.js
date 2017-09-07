@@ -105,8 +105,4 @@ require(['domReady!', 'jquery', 'cgh_carousel', 'cgh_templateEngine', 'cgh_throt
             content: '<h1>测试layer</h1>'
         });
     });
-
-
-
-
 });

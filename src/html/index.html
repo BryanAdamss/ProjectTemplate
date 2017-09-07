@@ -14,7 +14,7 @@
 
 <body>
     @import "_ie.html"
-    
+
     <div class="StickyWp">
         <div class="Header animated fadeInUp">头部</div>
         <div class="Sticky-content">
@@ -44,9 +44,10 @@
             <!--网格-->
             <style>
                 .c-Row [class^="c-Row-col"] {
-                    border: 1px solid red;
+                    border: 1px solid #c7c7c7;
                 }
             </style>
+            <h2>网格</h2>
             <div class="c-Row">
                 <div class="c-Row-col1">1</div>
             </div>
@@ -118,6 +119,36 @@
             </div>
             <div class="c-Row">
                 <div class="c-Row-col24">24</div>
+            </div>
+            <h3>嵌套</h3>
+            <div class="c-Row">
+                <div class="c-Row-col12">
+                    <div class="c-Row">
+                        <div class="c-Row-col12">12</div>
+                        <div class="c-Row-col12">12</div>
+                    </div>
+                </div>
+            </div>
+            <h3>响应式</h3>
+            <div class="c-Row">
+                <div class="c-Row-col4 c-Row-col6--sm c-Row-col12--md c-Row-col24--lg">c-Row-col4.c-Row-col6--sm.c-Row-col12--md.c-Row-col24--lg</div>
+            </div>
+            <h3>偏移</h3>
+            <div class="c-Row">
+                <div class="c-Row-col4 c-Row-colOffset20">c-Row-col4.c-Row-colOffset20</div>
+            </div>
+            <h3>水平居中</h3>
+            <div class="c-Row">
+                <div class="c-Row-col12 c-Row-colOffset6">特殊列可通过偏移居中c-Row-col12.c-Row-colOffset6</div>
+                <div class="c-Row u-textC">
+                    <div class="c-Row-col7">普通列可通过text-align居中.c-Row.u-textC；c-Row-col7</div>
+                </div>
+            </div>
+            <h3>垂直居中</h3>
+            <div class="c-Row c-Row--vAlign">
+                <div class="c-Row-col8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa facilis fuga inventore maxime molestias nesciunt numquam quas, sapiente! Autem dolorem esse modi officiis vel? Explicabo possimus sint vel voluptas.</div>
+                <div class="c-Row-col8">2</div>
+                <div class="c-Row-col8">3</div>
             </div>
             <!--网格 end-->
             <!--按钮-->
@@ -226,7 +257,7 @@
         </div>
         <div class="Sticky-footer">页脚</div>
     </div>
-    
+
     @import "_footer.html"
 
     <!--自定义模板 -->
@@ -234,7 +265,7 @@
         <h1><@this.text@></h1>
     </script>
     <!--自定义模板end -->
-    
+
 
     <script src="js/lib/require-2.3.3.min.js" data-main="js/index"></script>
 </body>
