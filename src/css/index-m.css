@@ -232,6 +232,10 @@ ul, ol {
     font-size: initial;
     text-align: left;
     position: relative; }
+    .c-Row [class*="c-Row-col"]:first-of-type {
+      padding-left: 0; }
+    .c-Row [class*="c-Row-col"]:last-of-type {
+      padding-right: 0; }
   .c-Row--vAlign [class*="c-Row-col"] {
     vertical-align: middle; }
   .c-Row .c-Row-col1 {
@@ -756,8 +760,9 @@ select:-webkit-autofill {
   line-height: 2em;
   padding: 0 .8em;
   border: 1px solid #c7c7c7;
-  border-radius: 3px;
   transition: all .3s ease-in-out; }
+  .c-Field--radius {
+    border-radius: 3px; }
   .c-Field:focus {
     border-color: #3da4fe;
     outline: 0;

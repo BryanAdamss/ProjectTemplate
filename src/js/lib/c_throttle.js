@@ -9,7 +9,7 @@
     }else{
         root[moduleName]=factory(root);
     }
-})(this,'throttle',function(win){
+})(this,'c_throttle',function(win){
     return function(fn, interval) {
         var _self = fn, //保存需要被延迟的函数
             firstTime = true, // 是否首次调用

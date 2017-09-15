@@ -151,8 +151,10 @@
             <div class="c-Row">
                 <div class="c-Row-col12">
                     <div class="c-Row">
-                        <div class="c-Row-col12">12</div>
-                        <div class="c-Row-col12">12</div>
+                        <div class="c-Row-col6">6</div>
+                        <div class="c-Row-col6">6</div>
+                        <div class="c-Row-col6">6</div>
+                        <div class="c-Row-col6">6</div>
                     </div>
                 </div>
             </div>
@@ -196,6 +198,7 @@
             <!--表单-->
             <div style="width:400px;margin:20px auto;">
                 <input type="text" class="c-Field">
+                <input type="text" class="c-Field c-Field--radius">
                 <input type="password" class="c-Field" disabled>
 
                 <textarea name="" id="" rows="5" class="c-Field"></textarea>
@@ -239,6 +242,11 @@
             </div>
             <!--表单end-->
             <!--layer-->
+            <style>
+                .c-Layer .layui-layer-content {
+                    background-color: red;
+                }
+            </style>
             <div style="width:140px;margin:20px auto;">
                 <button type="button" class="c-Btn js-layer">点击弹出layer</button>
             </div>
@@ -281,6 +289,12 @@
                 <div class="c-Targets-item">target4</div>
             </div>
             <!--tab切换 end-->
+            <!--拖拽-->
+            <div id="box" style="width:100px;">
+                <div id="box-hd" style="line-height: 2em;background-color:red;">可以拖拽</div>
+                <div class="box-bd" style="height: 5em;background-color:blue;">bd</div>
+            </div>
+            <!--拖拽 end-->
         </div>
         <div class="Sticky-footer">页脚</div>
     </div>

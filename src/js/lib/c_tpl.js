@@ -9,7 +9,7 @@
     } else {
         root[moduleName] = factory(root);
     }
-})(this, 'cgh_templateEngine', function (win) {
+})(this, 'c_tpl', function (win) {
     return function(html, options) {
         var re = /<@([^@>]+)?@>/g,
             reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g,

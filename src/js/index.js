@@ -7,12 +7,13 @@ var configs = {// 默认配置
         handlebars: 'handlebars-4.0.5.min',
         mock: 'mock-1.0.0.min',
         domReady: 'domReady',
-        cgh_carousel: '../vendor/jquery-c_carousel',
-        cgh_templateEngine: 'cgh_templateEngine',
-        cgh_throttle: 'cgh_throttle',
-        cgh_moveDirection: 'cgh_moveDirection',
+        c_carousel: '../vendor/jquery-c_carousel',
+        c_tpl: 'c_tpl',
+        c_throttle: 'c_throttle',
+        c_moveDirection: 'c_moveDirection',
         layer: '../vendor/layer/layer',
-        cgh_tabs: '../vendor/jquery-c_tabs'
+        c_tabs: '../vendor/jquery-c_tabs',
+        c_drag: '../vendor/jquery-c_drag'
     },
     shim: {}
 };
@@ -40,7 +41,7 @@ switch (htmlClassName) {// 根据浏览器不同而添加的配置
 
 require.config(configs);// 加载配置
 
-require(['domReady!', 'jquery', 'cgh_carousel', 'cgh_templateEngine', 'cgh_throttle', 'cgh_moveDirection', 'layer', 'cgh_tabs'], function (doc, $, cgh_carousel, tplEngine, throttle, moveDirection, layer, cgh_tabs) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
+require(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirection', 'layer', 'c_tabs','c_drag'], function (doc, $, c_carousel, tplEngine, throttle, moveDirection, layer, c_tabs,c_drag) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
 
     // ajax全局loading动画
     $.ajaxSetup({
@@ -65,7 +66,12 @@ require(['domReady!', 'jquery', 'cgh_carousel', 'cgh_templateEngine', 'cgh_throt
     });
 
     // 选项卡切换
-    $('.c-Tabs .c-Tabs-item').c_tabs('.c-Targets .c-Targets-item');
+    $('.c-Tabs .c-Tabs-item').c_tabs({
+        targets:'.c-Targets .c-Targets-item',
+        callback:function(){
+            console.log(2);
+        }
+    });
 
     // 模板引擎
     var html = tplEngine(document.querySelector('#tpl_test').innerHTML, {
@@ -97,12 +103,16 @@ require(['domReady!', 'jquery', 'cgh_carousel', 'cgh_templateEngine', 'cgh_throt
         layer.open({
             type: 1,
             title: '标题',
-            skin: 'cgh_Layer',// 自定义样式
+            skin: 'c-Layer',// 自定义样式
             move: false,// 不可移动
             area: ['440px', '300px'],// 长/宽
             closeBtn: 0,// 不需要关闭按钮
             shadeClose: true,// 点击mask关闭
             content: '<h1>测试layer</h1>'
         });
+    });
+    // 拖拽
+    $('#box-hd').c_drag({
+        target:'#box'
     });
 });
