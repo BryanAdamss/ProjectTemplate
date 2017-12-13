@@ -7,13 +7,14 @@ var configs = {// 默认配置
         handlebars: 'handlebars-4.0.5.min',
         mock: 'mock-1.0.0.min',
         domReady: 'domReady',
-        c_carousel: '../vendor/jquery-c_carousel',
+        c_carousel: '../vendors/jquery-c_carousel',
         c_tpl: 'c_tpl',
         c_throttle: 'c_throttle',
         c_moveDirection: 'c_moveDirection',
-        layer: '../vendor/layer/layer',
-        c_tabs: '../vendor/jquery-c_tabs',
-        c_drag: '../vendor/jquery-c_drag'
+        layer: '../vendors/layer/layer',
+        c_tabs: '../vendors/jquery-c_tabs',
+        c_drag: '../vendors/jquery-c_drag',
+        raf: '../vendors/request-frame'
     },
     shim: {}
 };
@@ -21,7 +22,7 @@ var htmlClassName = document.getElementsByTagName('html')[0].className;
 switch (htmlClassName) {// 根据浏览器不同而添加的配置
     case 'ie9':
         configs.paths.jquery = 'jquery-2.2.4.min';
-        configs.paths.placeholder = '../vendor/jquery-placeholder-2.3.1.min';
+        configs.paths.placeholder = '../vendors/jquery-placeholder-2.3.1.min';
         configs.shim.placeholder = {
             deps: ['jquery'],
         };
@@ -41,7 +42,7 @@ switch (htmlClassName) {// 根据浏览器不同而添加的配置
 
 require.config(configs);// 加载配置
 
-require(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirection', 'layer', 'c_tabs','c_drag'], function (doc, $, c_carousel, tplEngine, throttle, moveDirection, layer, c_tabs,c_drag) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
+define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirection', 'layer', 'c_tabs', 'c_drag', 'raf'], function (doc, $, c_carousel, tplEngine, throttle, moveDirection, layer, c_tabs, c_drag, requestFrame) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
 
     // ajax全局loading动画
     $.ajaxSetup({
@@ -67,9 +68,9 @@ require(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDire
 
     // 选项卡切换
     $('.c-Tabs .c-Tabs-item').c_tabs({
-        targets:'.c-Targets .c-Targets-item',
-        callback:function(){
-            console.log(2);
+        targets: '.c-Targets .c-Targets-item',
+        callback: function () {
+            console.log('over');
         }
     });
 
@@ -96,7 +97,7 @@ require(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDire
 
     // layer，使用requjre使用layer时，需要配置layer文件夹路径
     layer.config({
-        path: './js/vendor/layer/'
+        path: './js/vendors/layer/'
     });
 
     $('.js-layer').on('click', function () {
@@ -113,6 +114,33 @@ require(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDire
     });
     // 拖拽
     $('#box-hd').c_drag({
-        target:'#box'
+        target: '#box'
+    });
+
+    // 测试reques-animation-frame
+    var raf = requestFrame('request'),
+        caf = requestFrame('cancel');
+    var rafId = null;
+    var count = 0;
+
+    function move() {
+        count++;
+        $('#js_raf').css({
+            marginLeft: count + 'px'
+        });
+        if (count > 200) {
+            count = 0;
+        }
+        rafId = raf(move);
+    }
+
+    $('#js_raf_btn').on('click.cgh', function (eve) {
+        eve.stopPropagation();
+        rafId = raf(move);
+    });
+    $('#js_raf_stop_btn').on('click.cgh', function (eve) {
+        eve.stopPropagation();
+        // cancelAnimationFrame必须在window下才能调用
+        caf.call(window, rafId);
     });
 });

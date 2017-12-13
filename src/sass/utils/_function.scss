@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-// px转em
-@function pxToEm($px, $base-font-size: 16px) {
-    @if (unitless($px)) {
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
-        @return px2em($px + 0px);
-    } @else if (unit($px) == em) {
-        @return $px;
-    }
-    @return ($px / $base-font-size) * 1em;
-}
-
 // 为颜色添加白色，以百分比形式
 @function tint($color, $percent) {
     @return mix(white, $color, $percent);
@@ -48,7 +37,44 @@ $goldenRatio: 1.618033 !default;
     @return floor(($fontSize*$goldenRatio*$fontSize*$goldenRatio)*(1+2*$goldenRatio*(($lineHeight/$fontSize)-$goldenRatio))) px;
 }
 
+// px2em
+@function em($px, $base-font-size: 16px) {
+    @if (unitless($px)) { // 不带单位时，则假设它为px单位，进而转换成px单位并重新转em
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return em($px + 0px);
+    } @else if (unit($px) == em) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
 // px转rem
-@function px2rem($px) {
-    @return $px/($designWidth/10)*1rem;
+@function rem($px) {
+    @if (unitless($px)) { // 不带单位时，则假设它为px单位，进而转换成px单位并重新转rem
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return rem($px + 0px);
+    } @else if (unit($px) == rem) {
+        @return $px;
+    }
+    @return ($px/2)/($designWidth/10)*1rem; // 750设计图上默认1rem为75px，量出来的px得先除以2再和rem相除
+}
+
+// px转vw
+@function vw($px) {
+    @if (unitless($px)) { // 不带单位时，则假设它为px单位，进而转换成px单位并重新转vw
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return vw($px + 0px);
+    } @else if (unit($px) == vw) {
+        @return $px;
+    }
+    @return ($px / $designWidth)*100vw;
+}
+
+// 文字长阴影
+@function text-long-shadow($color:black,$depth:8) {
+    $shadows: (1px 1px $color,);
+    @for $i from 2 through $depth {
+        $shadows: append($shadows, ($i*1px) ($i*1px) $color, comma);
+    }
+    @return $shadows;
 }

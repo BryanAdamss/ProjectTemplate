@@ -1,6 +1,6 @@
 @charset "UTF-8";
 //所用被禁用的元素样式
-[disabled] {
+:disabled, [disabled], [aria-disabled] {
     @include disabled();
     @at-root #{&}.c-BorderBtn {
         // 禁用状态的borderBtn
@@ -24,7 +24,7 @@ select:-webkit-autofill {
     padding: 0 .8em;
     border: 1px solid $baseBorderColor;
     transition: all .3s ease-in-out;
-    @at-root #{&}--radius{
+    @at-root #{&}--radius {
         border-radius: $baseBorderRadius;
     }
     @at-root input#{&} {
@@ -51,7 +51,7 @@ select:-webkit-autofill {
     }
 }
 
-// input[type="file"]、radio、checkbox是无法使用伪元素的(chrome上可用是个bug)，所以折中使用添加标签的形式来模拟
+// input[type="file"]、radio、checkbox是无法使用伪元素的(chrome上可能是个bug)，所以折中使用添加标签的形式来模拟
 .c-File {
     @include inline-block();
     position: relative;
@@ -138,7 +138,7 @@ select:-webkit-autofill {
         }
         @at-root #{&}[disabled] ~ .c-Checkbox-icon:before {
             // radio禁用，置灰
-            color:$baseBorderColor;
+            color: $baseBorderColor;
         }
     }
     @at-root #{&}-icon {
@@ -168,7 +168,8 @@ select:-webkit-autofill {
             color: $mainTone;
             // 重写父元素上继承来的text-indent
             text-indent: -0.2em;
-            text-indent: -0.3em \9; // ie
+            text-indent: -0.3em \9
+        ; // ie
             text-align: center;
             // 去除i标签自带的倾斜效果
             font-style: normal;

@@ -1,55 +1,119 @@
 @import "_header_m.html"
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
-<body>
+<!-- 给body加一个空的touchstart事件即可让:active效果在移动端生效 -->
+<body ontouchstart="">
     <!--粘滞页脚-->
-    <div class="StickyWp">
-        <div class="Header">头部</div>
-        <div class="Sticky-content">
-            内容
+    <div class="c-Main">
+        <div class="c-Main-hd">头部</div>
+        <div class="c-Main-bd">
+            <!-- 测试移动端:active效果 -->
+            <style>
+                a {
+                    color: #000;
+                }
+
+                a:active {
+                    color: red;
+                }
+            </style>
+            <a herf="foo">测试移动端:active效果</a>
+            <!-- 测试移动端:active效果end -->
+
+            <!--测试保持长宽比-->
+            <div class="c-TestAspectRatio">
+                测试保持长宽比
+            </div>
+            <!--测试保持长宽比 end-->
+
+            <!--双飞翼布局-->
+            <div class="DoubleWing">
+                <div class="DoubleWing-main">
+                    <div class="DoubleWing-mainInner">主列</div>
+                </div>
+                <div class="DoubleWing-left">左列</div>
+                <div class="DoubleWing-right">右列</div>
+            </div>
+            <!--双飞翼布局 end-->
+
+            <!--时间插件-->
+            <style>
+                .dw-i {
+                    text-align: center;
+                }
+            </style>
+            <input type="text" id="js_mbtime">
+            <!--时间插件 end-->
+
+            <!--测试vw+rem-->
+            <div class="c-Box">
+                测试vw+rem
+            </div>
+            <!--测试vw+rem end-->
+
+            <!--测试粘滞页脚-->
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <p>sdfa</p>
+            <!--测试粘滞页脚 end-->
         </div>
-        <div class="Sticky-footer">页脚
+        <div class="c-Main-ft">
+            @import "_footer_m.html"
             <input type="text" placeholder="我是来测试input被键盘遮挡问题的" id="footer_input">
         </div>
     </div>
     <!--粘滞页脚 end-->
 
-    <!--双飞翼布局-->
-    <div class="DoubleWing">
-        <div class="DoubleWing-main">
-            <div class="DoubleWing-mainInner">主列</div>
-        </div>
-        <div class="DoubleWing-left">左列</div>
-        <div class="DoubleWing-right">右列</div>
-    </div>
-    <!--双飞翼布局 end-->
-
-    @import "_footer_m.html"
-
-    <script src="js/lib/zepto-1.2.0.min.js"></script>
-    <script src="js/lib/modernizr-3.3.1.min.js"></script>
-    <script src="js/lib/handlebars-4.0.5.min.js"></script>
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <!--<script src="js/lib/modernizr-3.3.1.min.js"></script>-->
     <script src="js/lib/mock-1.0.0.min.js"></script>
+    <!--滚动-->
     <script src="js/lib/iscroll-lite.js"></script>
-
-    <script src="js/vendor/mobiscroll-2.17.0.min.js"></script>
-    <script src="js/vendor/mobiscroll.i18n.zh.js"></script>
-
-    <script src="js/vendor/Scrollload.js"></script>
+    <!--滚动选择时间-->
+    <script src="js/vendors/mobiscroll-2.17.0.min.js"></script>
+    <script src="js/vendors/mobiscroll.i18n.zh.js"></script>
+    <!--滚动加载-->
+    <script src="js/vendors/Scrollload.js"></script>
     <script>
-        var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
-        var oInput = document.querySelector('#footer_input');
-        var timer = null;
-        oInput.onfocus = function() { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
-            timer = setInterval(function() { //设置一个计时器，时间设置与软键盘弹出所需时间相近
-                document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
-            }, 100)
-        };
+        (function () {
+            var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
+            var oInput = document.querySelector('#footer_input');
+            var timer = null;
+            oInput.onfocus = function () { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
+                timer = setInterval(function () { //设置一个计时器，时间设置与软键盘弹出所需时间相近
+                    document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+                }, 100)
+            };
 
-        oInput.onblur = function() { //设定输入框失去焦点时的事件
-            clearInterval(timer); //清除计时器
-            document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
-        };
+            oInput.onblur = function () { //设定输入框失去焦点时的事件
+                clearInterval(timer); //清除计时器
+                document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+            };
+        })();
+        (function () {
+            $('#js_mbtime').mobiscroll().date({
+                theme: 'ios',
+                lang: 'zh',
+                display: 'bottom',
+                dateFormat: "yy-mm-dd",
+                onBeforeShow: function (inst) {
+                    // 去除日
+                    // inst.settings.wheels[0].length > 2 ? inst.settings.wheels[0].pop() : null;
+                },
+                startYear: (new Date()).getFullYear() - 30,
+                maxDate: new Date()
+            });
+        })();
     </script>
 </body>
 </html>

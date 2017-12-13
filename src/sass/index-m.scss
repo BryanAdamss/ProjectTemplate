@@ -15,8 +15,6 @@
 @import "base/_typography";
 // 导入媒体查询
 @import "layout/_mediaQuery";
-//@import "layout/_grid";// 旧网格
-@import "layout/_gridNew";
 // 导入助手样式
 @import "helpers/_helpers";
 // 导入模块
@@ -30,19 +28,43 @@
 // 设置基本字体
 html {
     @include htmlFont(M);
+    height: 100%;
 }
 
-//设置sticky-footer
-@include stickyFooter(60px);
+body {
+    @include bodyFontSize(M);
+    background-color: #fff;
+    height: 100%;
+    border: 1px solid red;
+}
 
-// 设置旧网格
-//.Grid {
-//    @include wrapper();
-//    @at-root #{&}-row {
-//        background-color: #ccc;
-//    }
-//}
+.c-Main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @at-root #{&}-hd {
+        flex: 0 0 auto;
+    }
+    @at-root #{&}-bd {
+        flex: 1 1 auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    @at-root #{&}-ft {
+        flex: 0 0 auto;
+    }
+}
 
-@include DoubleWing(100, 200);
 
+.c-Box {
+    margin-top: rem(10px);
+    border: 1px solid #ccc;
+    width: rem(375px);
+    font-size: rem(24px);
+}
 
+.c-TestAspectRatio {
+    width: 80%;
+    border: 1px solid blue;
+    @include aspectRatio(160, 80);
+}

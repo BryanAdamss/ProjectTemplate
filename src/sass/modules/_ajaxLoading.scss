@@ -7,7 +7,7 @@
     right: 0;
     margin: auto;
     z-index: 99999999999;
-    @include bgAlpha();
+    //@include bgAlpha();
     text-align: center;
     > img {
         position: absolute;

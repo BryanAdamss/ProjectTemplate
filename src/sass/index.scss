@@ -25,7 +25,7 @@
 @import "modules/_animate";
 @import "modules/_ajaxLoading";
 // 导入插件样式
-@import "vendors/_cgh_carousel";
+@import "vendors/_c_carousel";
 
 // 页面具体样式
 // 设置基本字体
@@ -35,6 +35,7 @@ html {
 
 body {
     background-color: #fff;
+    min-width: 1260px;
     // 针对IE8单独设置样式
     @include ie8() {
         background-color: blue;
@@ -55,3 +56,60 @@ body {
 //        background-color: #ccc;
 //    }
 //}
+
+.bgPolka {
+    @include bgPolka(20px, 3px, tan, yellow);
+    width: 200px;
+    height: 200px;
+}
+
+.bgCheckboard {
+    @include bgCheckboard(20px, tan);
+    width: 200px;
+    height: 200px;
+}
+
+.text-3d {
+    @include text-3d();
+    font-size: 30px;
+    background-color: #28a;
+}
+
+.long-shadow {
+    background-color: #28a;
+    line-height: 4em;
+    font-size: 40px;
+    text-shadow: text-long-shadow();
+    color: #fff;
+}
+
+.c-TestNum {
+    @at-root #{&}-item {
+        @include n-items(1) {
+            color: red;
+        }
+
+        @include n-items(2) {
+            color: blue;
+        }
+
+        @include n-items(3) {
+            color: olive;
+        }
+    }
+}
+
+.c-Db {
+    @at-root #{&}-item {
+        @include DoubleWing(100, 200);
+        @at-root #{&}--main{
+            background-color: blue;
+        }
+        @at-root #{&}--left{
+            background-color: red;
+        }
+        @at-root #{&}--right{
+            background-color: olive;
+        }
+    }
+}

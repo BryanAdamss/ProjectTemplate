@@ -27,6 +27,7 @@ $bp_pc:80em !default;
         @include inline-block($gridVerticalAlign);
         // .c-Row设置font-size:0,所以列使用inital设置回浏览器默认值
         font-size: initial;
+        font-size: 16px\9;
         // 由于在c-Row上可能应用u-textC来居中列，所以在列中将text-align置回正常值
         text-align: left;
         position: relative;

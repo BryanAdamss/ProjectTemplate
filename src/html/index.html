@@ -15,9 +15,9 @@
 <body>
     @import "_ie.html"
 
-    <div class="StickyWp">
+    <div class="c-Sticky">
         <div class="Header animated fadeInUp">头部</div>
-        <div class="Sticky-content">
+        <div class="c-Sticky-bd">
 
             <!--轮播-->
             <div class="c-Carousel">
@@ -188,7 +188,7 @@
                 <!--上传文件，如果需要使用到c-Btn，请使用没有默认事件的标签，不要使用button、或者input形式的按钮(会有默认点击事件，无法触发label关联的file上传)-->
                 <label class="c-File">
                     <span class="c-Btn c-Btn--radius" role="button">选择文件</span>
-                    <input type="file">
+                    <input type="file" accept="image/*">
                 </label>
                 <!--radio-->
                 <label class="c-Radio">
@@ -268,8 +268,49 @@
                 <div class="box-bd" style="height: 5em;background-color:blue;">bd</div>
             </div>
             <!--拖拽 end-->
+            <!--波点-->
+            <div class="bgPolka"></div>
+            <div class="bgCheckboard"></div>
+            <!--波点 end-->
+            <!--3d文字-->
+            <div class="text-3d">3D文字</div>
+            <!--3d文字 end-->
+            <!--长阴影文字-->
+            <div class="long-shadow">Long Shadow</div>
+            <!--长阴影文字 end-->
+
+            <!--测试raf-->
+            <div id="js_raf" style="width:100px;height:100px;background-color:red;">request-animation-frame</div>
+            <button id="js_raf_btn">raf</button>
+            <button id="js_raf_stop_btn">stop_raf</button>
+            <!--测试raf end-->
+
+            <!--测试根据元素数量选择元素-->
+            <ul class="c-TestNum">
+                <li class="c-TestNum-item">测试根据元素数量选择元素1</li>
+            </ul>
+            <ul class="c-TestNum">
+                <li class="c-TestNum-item">测试根据元素数量选择元素1</li>
+                <li class="c-TestNum-item">测试根据元素数量选择元素2</li>
+            </ul>
+            <ul class="c-TestNum">
+                <li class="c-TestNum-item">测试根据元素数量选择元素1</li>
+                <li class="c-TestNum-item">测试根据元素数量选择元素2</li>
+                <li class="c-TestNum-item">测试根据元素数量选择元素3</li>
+            </ul>
+            <!--测试根据元素数量选择元素end-->
+
+            <!--测试双飞翼布局-->
+            <div class="c-Db">
+                <div class="c-Db-item c-Db-item--main">
+                    <div class="c-Db-item c-Db-item--mainInner">主体内容</div>
+                </div>
+                <div class="c-Db-item c-Db-item--left">left</div>
+                <div class="c-Db-item c-Db-item--right">right</div>
+            </div>
+            <!--测试双飞翼布局 end-->
         </div>
-        <div class="Sticky-footer">页脚</div>
+        <div class="c-Sticky-ft">页脚</div>
     </div>
 
     @import "_footer.html"

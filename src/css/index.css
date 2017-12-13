@@ -18,12 +18,12 @@ a.c-Btn, a.c-BorderBtn {
 a.c-Btn, a.c-BorderBtn {
   -webkit-touch-callout: none; }
 
-.u-clearfix {
+.u-clearfix, .c-Db-item {
   *zoom: 1; }
-  .u-clearfix:before, .u-clearfix:after {
+  .u-clearfix:before, .c-Db-item:before, .u-clearfix:after, .c-Db-item:after {
     content: "";
     display: table; }
-  .u-clearfix:after {
+  .u-clearfix:after, .c-Db-item:after {
     clear: both;
     overflow: hidden; }
 
@@ -223,6 +223,9 @@ ul, ol {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .c-Row {
   font-size: 0; }
   .c-Row [class*="c-Row-col"] {
@@ -234,6 +237,7 @@ ul, ol {
     *zoom: 1;
     *display: inline;
     font-size: initial;
+    font-size: 16px\9;
     text-align: left;
     position: relative; }
     .c-Row [class*="c-Row-col"]:first-of-type {
@@ -628,14 +632,8 @@ ul, ol {
 .u-font0 {
   font-size: 0 !important; }
 
-.u-fontNormal {
+.u-fontBase {
   font-size: 16px !important; }
-
-.u-fontSmall {
-  font-size: 14px !important; }
-
-.u-font0 {
-  font-size: 0 !important; }
 
 .u-fontBold {
   font-weight: bold !important; }
@@ -749,12 +747,12 @@ a.c-Btn, a.c-BorderBtn {
   .c-BorderBtn--round {
     border-radius: 1em/1em; }
 
-[disabled] {
+:disabled, [disabled], [aria-disabled] {
   background-color: #e6e6e6 !important;
   color: #ababab !important;
   cursor: not-allowed !important;
   pointer-events: none !important; }
-  [disabled].c-BorderBtn {
+  :disabled, [disabled], [aria-disabled].c-BorderBtn {
     background-color: transparent !important; }
 
 input:-webkit-autofill,
@@ -1008,8 +1006,6 @@ select:-webkit-autofill {
   right: 0;
   margin: auto;
   z-index: 99999999999;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#80000000', endColorstr='#80000000');
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center; }
   .c-AjaxLoading > img {
     position: absolute;
@@ -1028,14 +1024,16 @@ select:-webkit-autofill {
     list-style: none;
     position: relative;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    transform: translateZ(0px);
+    z-index: 999; }
   .c-Carousel-item {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1064,10 +1062,13 @@ select:-webkit-autofill {
       background-color: #3da4fe; }
 
 html {
-  font: 16px/1.625 arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  font-size: 16px;
+  line-height: 1.625;
+  font-family: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
 
 body {
-  background-color: #fff; }
+  background-color: #fff;
+  min-width: 1260px; }
   .ie8 body {
     background-color: blue; }
   .ie9 body {
@@ -1077,18 +1078,88 @@ html,
 body {
   height: 100%; }
 
-.StickyWp {
+.c-Sticky {
   min-height: 100%;
   /*IE6不识别min-height*/
   height: auto !important;
   height: 100%;
   position: relative; }
 
-.Sticky-content {
+.c-Sticky-bd {
   overflow: auto;
   padding-bottom: 60px; }
 
-.Sticky-footer {
+.c-Sticky-ft {
   position: absolute;
   bottom: 0;
   width: 100%; }
+
+.bgPolka {
+  background-color: tan;
+  background-image: radial-gradient(yellow 3px, transparent 0), radial-gradient(yellow 3px, transparent 0);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  width: 200px;
+  height: 200px; }
+
+.bgCheckboard {
+  background-color: tan;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, 0.25) 0), linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, 0.25) 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  width: 200px;
+  height: 200px; }
+
+.text-3d {
+  color: white;
+  text-shadow: 0 1px #e6e6e6, 0 2px #cccccc, 0 3px #b3b3b3, 0 4px #999999, 0 5px gray, 0 5px 10px black;
+  font-size: 30px;
+  background-color: #28a; }
+
+.long-shadow {
+  background-color: #28a;
+  line-height: 4em;
+  font-size: 40px;
+  text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black;
+  color: #fff; }
+
+.c-TestNum-item:only-child {
+  color: red; }
+
+.c-TestNum-item:first-child:nth-last-child(2),
+.c-TestNum-item:first-child:nth-last-child(2) ~ .c-TestNum-item {
+  color: blue; }
+
+.c-TestNum-item:first-child:nth-last-child(3),
+.c-TestNum-item:first-child:nth-last-child(3) ~ .c-TestNum-item {
+  color: olive; }
+
+.c-Db-item--main {
+  float: left;
+  _display: inline;
+  width: 100%; }
+
+.c-Db-item--mainInner {
+  margin-left: 100px;
+  margin-right: 200px; }
+
+.c-Db-item--left {
+  float: left;
+  _display: inline;
+  width: 100px;
+  margin-left: -100%; }
+
+.c-Db-item--right {
+  float: left;
+  _display: inline;
+  width: 200px;
+  margin-left: -200px; }
+
+.c-Db-item--main {
+  background-color: blue; }
+
+.c-Db-item--left {
+  background-color: red; }
+
+.c-Db-item--right {
+  background-color: olive; }
