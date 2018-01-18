@@ -3,6 +3,14 @@ button, [type="button"], [type="submit"], [type="reset"] {
     @extend %noAppearance;
 }
 
+//禁用状态的BorderBtn
+:disabled, [disabled], [aria-disabled] {
+    @at-root #{&}.c-BorderBtn {
+        // 禁用状态的borderBtn
+        background-color: transparent !important;
+    }
+}
+
 .c-Btn, .c-BorderBtn {
     font-size: 16px;
     cursor: pointer;
