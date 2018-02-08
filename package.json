@@ -16,6 +16,7 @@
     "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^2.0.12",
     "gulp-html-import": "0.0.2",
+    "gulp-less": "^3.4.0",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
     "gulp-sequence": "^0.4.6",

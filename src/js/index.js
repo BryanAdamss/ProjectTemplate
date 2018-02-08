@@ -7,22 +7,26 @@ var configs = {// 默认配置
         handlebars: 'handlebars-4.0.5.min',
         mock: 'mock-1.0.0.min',
         domReady: 'domReady',
-        c_carousel: '../vendors/jquery-c_carousel',
+        c_carousel: '../widgets/jquery-c_imgSlider',
         c_tpl: 'c_tpl',
         c_throttle: 'c_throttle',
         c_moveDirection: 'c_moveDirection',
-        layer: '../vendors/layer/layer',
-        c_tabs: '../vendors/jquery-c_tabs',
-        c_drag: '../vendors/jquery-c_drag',
-        raf: '../vendors/request-frame'
+        layer: '../../vendors/layer/layer',
+        c_tabs: '../widgets/jquery-c_tabs',
+        c_drag: '../widgets/jquery-c_drag',
+        c_pagination: '../widgets/c_pagination',
+        c_jsonp: 'c_jsonp',
+        raf: '../widgets/request-frame'
     },
     shim: {}
 };
+
 var htmlClassName = document.getElementsByTagName('html')[0].className;
+
 switch (htmlClassName) {// 根据浏览器不同而添加的配置
     case 'ie9':
         configs.paths.jquery = 'jquery-2.2.4.min';
-        configs.paths.placeholder = '../vendors/jquery-placeholder-2.3.1.min';
+        configs.paths.placeholder = '../widgets/jquery-placeholder-2.3.1.min';
         configs.shim.placeholder = {
             deps: ['jquery'],
         };
@@ -42,23 +46,23 @@ switch (htmlClassName) {// 根据浏览器不同而添加的配置
 
 require.config(configs);// 加载配置
 
-define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirection', 'layer', 'c_tabs', 'c_drag', 'raf'], function (doc, $, c_carousel, tplEngine, throttle, moveDirection, layer, c_tabs, c_drag, requestFrame) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
+define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirection', 'layer', 'c_tabs', 'c_drag', 'raf', 'c_pagination', 'c_jsonp'], function (doc, $, c_carousel, tplEngine, throttle, moveDirection, layer, c_tabs, c_drag, requestFrame, c_pagination, c_jsonp) {// 使用domReady!后，回调会在dom准备好后才被调用，并返回一个document
 
     // ajax全局loading动画
     $.ajaxSetup({
         beforeSend: function () {
-            $('body').append('<div class="c-AjaxLoading"><img src="img/loading.gif" alt="loading"></div>');
+            $('body').append('<div class="c-Loading"><img src="img/loading.gif" alt="loading"></div>');
         },
         success: function () {
-            $('.c-AjaxLoading').remove();
+            $('.c-Loading').remove();
         },
         error: function () {
-            $('.c-AjaxLoading').remove();
+            $('.c-Loading').remove();
         }
     });
 
     // 轮播调用
-    $('.c-Carousel').c_carousel({
+    $('.c-ImgSlider').c_carousel({
         height: 380,
         autoPlay: true,
         showPagination: true,
@@ -70,7 +74,7 @@ define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirec
     $('.c-Tabs .c-Tabs-item').c_tabs({
         targets: '.c-Targets .c-Targets-item',
         callback: function () {
-            console.log('over');
+            console.log('选项卡切换over');
         }
     });
 
@@ -91,13 +95,13 @@ define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirec
     $(window).on('scroll', throttle(scrollHandler, 50));// 只触发4次
 
     // 测试鼠标移入移出方向
-    $('.testMoveDir').on('mouseenter mouseleave', function (e) {
-        console.log(e.type, '方向', moveDirection(this, e));
+    $('#testMoveDir').on('mouseenter mouseleave', function (e) {
+        $(this).html(e.type + '方向' + moveDirection(this, e));
     });
 
     // layer，使用requjre使用layer时，需要配置layer文件夹路径
     layer.config({
-        path: './js/vendors/layer/'
+        path: './vendors/layer/'
     });
 
     $('.js-layer').on('click', function () {
@@ -142,5 +146,41 @@ define(['domReady!', 'jquery', 'c_carousel', 'c_tpl', 'c_throttle', 'c_moveDirec
         eve.stopPropagation();
         // cancelAnimationFrame必须在window下才能调用
         caf.call(window, rafId);
+    });
+
+
+    // 分页器
+    var page = new c_pagination('js_page', {
+        skin: 'mySkin',
+        totalCount: 500,
+        curPage: 1,
+        pageShowCount: 5,
+        pageSizeList: [5, 10, 15, 20, 25, 50],
+        defaultPageSize: 10,
+        showJump: true,
+        showPageSizeSelector: true,
+        showPN: true,
+        showFL: true,
+        callback: function (curPage, pageSize, ele) {
+            console.log(this, curPage, pageSize, ele);
+        }
+    });
+    setTimeout(function () {
+        page.goLast();
+    }, 1000);
+
+    // jsonp
+    c_jsonp({
+        url: 'http://192.168.23.126:8080/hfgj/app/cgh.do',
+        data: {
+            id: 3,
+            name: 'cgh'
+        },
+        success: function (resp) {
+            console.log(resp);
+        },
+        error: function () {
+            console.log('jsonp请求出错了');
+        }
     });
 });

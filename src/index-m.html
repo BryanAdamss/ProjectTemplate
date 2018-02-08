@@ -14,11 +14,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
     <title>我是标题</title>
     <link rel="icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="vendors/mobiscroll/css/mobiscroll.custom-2.17.0.min.css">
+<link rel="stylesheet" type="text/css" href="vendors/photoSwipe/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="vendors/photoSwipe/default-skin/default-skin.css">
+<link rel="stylesheet" type="text/css" href="css/weui/weui.css">
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <!-- 给body加一个空的touchstart事件即可让:active效果在移动端生效 -->
 <body ontouchstart="">
-    <!--粘滞页脚-->
     <div class="c-Main">
         <div class="c-Main-hd">头部</div>
         <div class="c-Main-bd">
@@ -33,7 +37,7 @@
                 }
             </style>
             <a herf="foo">测试移动端:active效果</a>
-            <!-- 测试移动端:active效果end -->
+            <!-- 测试移动端:active效果 end-->
 
             <!--测试保持长宽比-->
             <div class="c-TestAspectRatio">
@@ -42,12 +46,12 @@
             <!--测试保持长宽比 end-->
 
             <!--双飞翼布局-->
-            <div class="DoubleWing">
-                <div class="DoubleWing-main">
-                    <div class="DoubleWing-mainInner">主列</div>
+            <div class="c-DoubleWing">
+                <div class="c-DoubleWing-main">
+                    <div class="c-DoubleWing-mainInner">主列</div>
                 </div>
-                <div class="DoubleWing-left">左列</div>
-                <div class="DoubleWing-right">右列</div>
+                <div class="c-DoubleWing-left">左列</div>
+                <div class="c-DoubleWing-right">右列</div>
             </div>
             <!--双飞翼布局 end-->
 
@@ -57,7 +61,7 @@
                     text-align: center;
                 }
             </style>
-            <input type="text" id="js_mbtime">
+            <input type="text" id="js_mbtime" placeholder="选择时间">
             <!--时间插件 end-->
 
             <!--测试vw+rem-->
@@ -66,21 +70,86 @@
             </div>
             <!--测试vw+rem end-->
 
-            <!--测试粘滞页脚-->
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <p>sdfa</p>
-            <!--测试粘滞页脚 end-->
+            <!--测试photoswipe-->
+            <style>
+                #testPhotoSwipe img {
+                    display: block;
+                    max-width: 100%;
+                    margin: 10px auto;
+                }
+            </style>
+            <ul id="testPhotoSwipe">
+                <li>
+                    <img src="http://placehold.it/100x100" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/200x100" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/300x100" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/400x100" alt="">
+                </li>
+            </ul>
+            <!--测试photoswipe end-->
+
+            <!--测试lazysizes-->
+            <h2>测试lazysizes</h2>
+            <style>
+                .testLazySizes-item {
+                    width: 100%;
+                    height: 210px;
+                    border: 1px solid blue;
+                }
+
+                .testLazySizes-item .lazyload,.testLazySizes-item .lazyloading {
+                    opacity: 0;
+                }
+
+                .testLazySizes-item .lazyloaded {
+                    opacity: 1;
+                    transition: .3s;
+                }
+
+            </style>
+            <ul class="testLazySizes">
+                <li class="testLazySizes-item">
+                    <!--如果不写src，某些浏览器会显示无图片的样式，所以放一张1x1的透明图占位；用lazyload指明需要使用懒加载；用data-src指明原图地址；-->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-src="http://placehold.it/100x200">
+                </li>
+                <li class="testLazySizes-item">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-src="http://placehold.it/200x200">
+                </li>
+                <li class="testLazySizes-item">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-src="http://placehold.it/300x200">
+                </li>
+            </ul>
+            <!--测试lazysizes end-->
+
+            <!--测试lazysizes在背景图上的实现-->
+            <h2>测试lazysizes在背景图上的实现</h2>
+            <style>
+
+                .testLazySizesBg-item {
+                    width: 100%;
+                    height: 210px;
+                    border: 1px solid blue;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size:cover;
+                }
+
+                .testLazySizesBg-item.lazyload, .testLazySizesBg-item.lazyloading {
+                    background-image: url("img/loading.gif");
+                }
+            </style>
+            <ul class="testLazySizesBg">
+                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
+                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
+                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
+            </ul>
+            <!--测试lazysizes在背景图上的实现 end-->
         </div>
         <div class="c-Main-ft">
             <!-- 公用的页脚 -->
@@ -90,48 +159,162 @@
             <input type="text" placeholder="我是来测试input被键盘遮挡问题的" id="footer_input">
         </div>
     </div>
-    <!--粘滞页脚 end-->
+
+    <!-- 相册 -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 相册end -->
 
     <script src="js/lib/jquery-2.2.4.min.js"></script>
-    <!--<script src="js/lib/modernizr-3.3.1.min.js"></script>-->
-    <script src="js/lib/mock-1.0.0.min.js"></script>
+    <!--<script src="js/lib/mock-1.0.0.min.js"></script>-->
     <!--滚动-->
-    <script src="js/lib/iscroll-lite.js"></script>
-    <!--滚动选择时间-->
-    <script src="js/vendors/mobiscroll-2.17.0.min.js"></script>
-    <script src="js/vendors/mobiscroll.i18n.zh.js"></script>
+    <!--<script src="js/lib/iscroll-lite.js"></script>-->
     <!--滚动加载-->
-    <script src="js/vendors/Scrollload.js"></script>
+    <!--<script src="js/widgets/Scrollload.js"></script>-->
+    <!--滚动选择时间-->
+    <script src="vendors/mobiscroll/js/mobiscroll.custom-2.17.0.min.js"></script>
+    <script src="vendors/mobiscroll/js/i18n/mobiscroll.i18n.zh.js"></script>
+    <!--图片查看-->
+    <script src="vendors/photoSwipe/photoswipe.min.js"></script>
+    <script src="vendors/photoSwipe/photoswipe-ui-default.min.js"></script>
+    <!--lazyload-->
     <script>
-        (function () {
-            var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
-            var oInput = document.querySelector('#footer_input');
-            var timer = null;
-            oInput.onfocus = function () { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
-                timer = setInterval(function () { //设置一个计时器，时间设置与软键盘弹出所需时间相近
-                    document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
-                }, 100)
-            };
+        // lazySizes配置文件，必须在引入lazysize之前配置
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.init = false;// 不会自动初始化，需要手动调用init()方法来初始化
+        window.lazySizesConfig.expand = 10;// 扩展可视区域以预加载图片
+    </script>
+    <script src="vendors/lazysizes/lazysizes-umd.min.js"></script>
+    <script src="vendors/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"></script>
+    <!--weui.js-->
+    <script src="js/widgets/weui.min.js"></script>
+    <script>
+        $(function () {
+            main();
 
-            oInput.onblur = function () { //设定输入框失去焦点时的事件
-                clearInterval(timer); //清除计时器
-                document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
-            };
-        })();
-        (function () {
-            $('#js_mbtime').mobiscroll().date({
-                theme: 'ios',
-                lang: 'zh',
-                display: 'bottom',
-                dateFormat: "yy-mm-dd",
-                onBeforeShow: function (inst) {
-                    // 去除日
-                    // inst.settings.wheels[0].length > 2 ? inst.settings.wheels[0].pop() : null;
-                },
-                startYear: (new Date()).getFullYear() - 30,
-                maxDate: new Date()
-            });
-        })();
+            function main() {
+                fixBottomInput();
+                initDatePicker();
+                bindImg();
+                lazySizes.init(); // 手动初始化lazysizes
+                weui.alert('普通的alert');
+            }
+
+            function fixBottomInput() {
+                var bfscrolltop = document.body.scrollTop; //获取软键盘唤起前浏览器滚动部分的高度
+                var oInput = document.querySelector('#footer_input');
+                var timer = null;
+                oInput.onfocus = function () { //在这里‘footer_input’是我的底部输入栏的输入框，当它获取焦点时触发事件
+                    timer = setInterval(function () { //设置一个计时器，时间设置与软键盘弹出所需时间相近
+                        document.body.scrollTop = document.body.scrollHeight; //获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+                    }, 100)
+                };
+
+                oInput.onblur = function () { //设定输入框失去焦点时的事件
+                    clearInterval(timer); //清除计时器
+                    document.body.scrollTop = bfscrolltop; // 将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+                };
+            }
+
+            function initDatePicker() {
+                $('#js_mbtime').mobiscroll().date({
+                    theme: 'ios',
+                    lang: 'zh',
+                    display: 'bottom',
+                    dateFormat: "yy-mm-dd",
+                    onBeforeShow: function (inst) {
+                        // 去除日
+                        // inst.settings.wheels[0].length > 2 ? inst.settings.wheels[0].pop() : null;
+                    },
+                    startYear: (new Date()).getFullYear() - 30,
+                    maxDate: new Date()
+                });
+            }
+
+            function bindImg() {
+                $('#testPhotoSwipe').on('click.cgh', 'li', function (e) {
+                    var $this = $(this);
+                    var $imgs = $this.parent('#testPhotoSwipe').find('img');
+                    var index = $this.index();
+                    var slides = [];
+                    $imgs.each(function () {
+                        var temp = {};
+                        temp.src = $(this).attr('src');
+                        getImageWidth(temp.src, function (w, h) {
+                            temp.w = w;
+                            temp.h = h;
+                            slides.push(temp);
+                        });
+                    });
+                    openPswp(slides, index);
+                });
+            }
+
+            function openPswp(items, index) {
+                var pswp = $('.pswp').get(0);
+                var options = {
+                    index: index,
+                    escKey: false,
+                    arrowKeys: false,
+                    shareEl: false,
+                    zoomEl: false,
+                    fullscreenEl: false,
+                    loop: false,
+                    pinchToClose: false,
+                    showHideOpacity: true,
+                    closeOnScroll: false,
+                    errorMsg: '<div class="pswp__error-msg">图片无法加载</div>'
+                };
+                var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            }
+
+            function getImageWidth(url, callback) {
+                var img = new Image();
+                img.src = url;
+                if (img.complete) {
+                    callback(img.width, img.height);
+                } else {
+                    img.onload = function () {
+                        callback(img.width, img.height);
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>

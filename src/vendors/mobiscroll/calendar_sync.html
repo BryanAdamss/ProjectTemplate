@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+    <title>Custom data binding</title>
+
+    <!-- jQuery Include -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Framework Include -->
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css" type="text/css" />
+    <script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+
+    <style type="text/css">
+        
+        /* Demo Page styling, you can ignore this in your implementation */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.8em 2.6em;
+            margin: 20px 10px 0 0;
+            outline: 0;
+            border: 0;
+            overflow: visible;
+            cursor: pointer;
+            color: #fff;
+            background: #5185a8;
+            font-family: Arial, sans-serif, verdana;
+            font-size: 14px;
+            font-weight: 100;
+            -webkit-transition: background 0.3s ease-out;
+            -moz-transition: background 0.3s ease-out;
+            -o-transition: background 0.3s ease-out;
+            transition: background 0.3s ease-out;
+        }
+        
+        button:hover {
+            background: #34566d;
+        }
+
+        input {
+            width: 100%;
+            margin: 0 0 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            background: #fff;
+            font-family: Arial, sans-serif,verdana;
+            text-shadow: none;
+            color: #000;
+            font-size: 15px;
+            -webkit-appearance: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .demo-iframe { 
+            padding: 10px 10px 10px 10px; 
+            text-shadow: none; 
+        }
+
+        /* Demo specific styling */
+        div .demo-sync { padding: 0; }
+        div .demo-sync #demo { display: block; }
+        div .demo-sync #show { position: static; }
+        div .demo-sync .icc { padding: 0; }
+        div .demo-sync .ic { text-align: left; }
+        div .demo-sync .ic p { padding: 0 5px; color: #000; text-shadow: none; }
+        div .demo-sync .md-cal-btn-c .md-cal-auth { display: block; margin-top: 5px; width: 100%;}
+        
+        .md-cal-list { list-style: none; margin: 0; padding: 0;}
+        .md-cal-list li { position: relative; list-style: none; margin: 0; padding: 0; background: #f0f0f0; border-bottom: 1px solid #b1b1b1; border-top: 1px solid #fff; padding: 5px 40px 5px 10px; color: #333; }
+        .md-cal-list h3 { margin: 5px 0; font-weight: normal; }
+        .md-cal-list p { display: block; margin: 5px 0; color: #717171; }
+        .md-cal-color { width: 5px; height: 100%; position: absolute; top: 0; left: 0; }
+        .md-cal-list .md-cal-sync { position: absolute; right: 0; top: 0; padding-top:25px; padding-right:15px; text-decoration: underline; }
+        .md-cal-btn-c {padding: 0 5px;}
+        
+        .demo-preview .demo-phone-screen .demo-iframe {padding: 0;}
+        .demo-preview .demo-note { margin: 5px;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+        
+            function getFirstAndLastDay(year, month) {
+                firstDay = new Date(year, month, 1);
+                lastDay = new Date(year, month + 1, 0);
+            }
+        
+            function addEventsToList(list, name, id, color, startDate, endDate) {
+                list.push({
+                    start: startDate,
+                    end: endDate,
+                    text: name,
+                    calendarId: id,
+                    color: color
+                });
+            }
+        
+            function callBackSetEvent(list) {
+                if (requestCounter == 0) {
+                    calendar.mobiscroll('setEvents', list);
+                }
+            }
+        
+            function callBackAddevent(list) {
+                calendar.mobiscroll('addEvent', list);
+            }
+        
+            // Facebook functions
+            function loadFacebookSDK() {
+                window.fbAsyncInit = function () {
+                    // init the FB JS SDK
+                    FB.init({
+                        appId      : '306273539474640',                    // App ID from the app dashboard
+                        status     : true,                                 // Check Facebook Login status
+                        xfbml      : false                                 // Look for social plugins on the page
+                    });
+                };
+                // Load the SDK asynchronously
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return; }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/all.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            }
+        
+            function getFBEvents(id, list, callBack, button) {
+                var noreply = false;
+        
+                if (button) {
+                    button.text('Syncing...');
+                }
+        
+                calId[id] = true;
+        
+                if (id == 'nfb') {
+                    noreply = true;
+                }
+        
+                requestCounter++;
+        
+                FB.api('me/events/' + (noreply ? "not_replied" : "") + '?since=' + firstDay.getTime() / 1000 + '&until=' + lastDay.getTime() / 1000 + '', { fields: 'name,id,start_time,end_time' }, function (resp) {
+                    if (resp.data) {
+                        $.each(resp.data, function (i, v) {
+                            addEventsToList(list, v.name, id, noreply ? '#3EA9F8' : '#3B5998', new Date(v.start_time), (v.end_time) ? new Date(v.end_time) : '');
+                        });
+                        requestCounter--;
+                    }
+                    if (button) {
+                        button.text('Hide');
+                    }
+                    callBack(list);
+                });
+            }
+        
+            function clearFBEvents(id, button) {
+                var i,
+                    list = calendar.mobiscroll('getEvents'),
+                    l = [];
+        
+                for (i = 0; i < list.length; i++) {
+                    if (list[i].calendarId == id) {
+                        l.push(list[i]._id);
+                    }
+                }
+        
+                calendar.mobiscroll('removeEvent', l);
+        
+                if (button) {
+                    button.text("Show");
+                }
+            }
+        
+            function createFBList() {
+                if ($('#fbList li').length == 0) {
+                    $("#fbList").html('<li><h3>Facebook</h3><p>Events Attending</p><a href="#" class="md-cal-sync" id="fb">Show</a><div style="background-color:#3B5998" class="md-cal-color"></div></li>' + '<li><h3>Facebook</h3><p>Events Not Attending</p><a href="#" class="md-cal-sync" id="nfb">Show</a><div style="background-color:#3EA9F8" class="md-cal-color"></div></li>');
+                }
+            }
+        
+            // Google calendars
+        
+            // Load the SDK asynchronously
+            function loadGoogleSDK() {
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return; }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//apis.google.com/js/client.js?onload=onGoogleLoad";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'google-jssdk'));
+            }
+        
+            function onGoogleLoad() {
+                gapi.auth.init(function () {});
+            }
+        
+            function getGoogleColors() {
+                gapi.client.load('calendar', 'v3', function () {
+                    var request = gapi.client.calendar.colors.get({
+                        'fields': 'event'
+                    });
+        
+                    request.execute(function (resp) {
+                        $.each(resp.event, function (i, v) {
+                            eventColor[i] = v.background;
+                        });
+                    });
+                });
+            }
+        
+            function getGoogleCalendars() {
+                getGoogleColors();
+                gapi.client.load('calendar', 'v3', function () {
+        
+                    var html = '',
+                        request = gapi.client.calendar.calendarList.list({
+                            'fields': 'items(backgroundColor,colorId,description,id,summary)'
+                        });
+        
+                    request.execute(function (resp) {
+        
+                        $.each(resp.items, function (i, v) {
+                            calendarColors[v.id] = v.backgroundColor;
+                            html += '<li><h3>' + v.summary + '</h3><p>' + (v.description || 'No description') + '</p><a href="#" data-calendar-id="' + v.id + '" class="md-cal-sync">Show</a><div style="background-color: ' + v.backgroundColor + '" class="md-cal-color"></div></li>';
+                        });
+        
+                        $("#googleList").html(html);
+                    });
+                });
+            }
+        
+            function getGoogleEvents(id, list, callBack, button) {
+                
+                if (button) {
+                    button.text("Syncing...");
+                }
+        
+                calId[id] = true;
+        
+                requestCounter++;
+        
+                gapi.client.load('calendar', 'v3', function () {
+                    var request = gapi.client.calendar.events.list({
+                        'calendarId': id,
+                        'timeMin': firstDay.toISOString(),
+                        'timeMax': lastDay.toISOString()
+                    });
+        
+                    request.execute(function (resp) {
+                        if (resp.items) {
+                            $.each(resp.items, function (i, v) {
+                                if (v.start.dateTime) { //events inside a day
+                                    addEventsToList(list, v.summary || 'No title', id, v.colorId ? eventColor[v.colorId] : calendarColors[id], new Date(v.start.dateTime), new Date(v.end.dateTime));
+                                } else { // day or multi day event
+                                    addEventsToList(list, v.summary || 'No title', id, v.colorId ? eventColor[v.colorId] : calendarColors[id], new Date(v.start.date), ((new Date(v.end.date) - new Date(v.start.date)) / 86400000 == 1) ? '' : new Date(v.end.date));
+                                }
+                            });
+                        }
+        
+                        requestCounter--;
+        
+                        if (button) {
+                            button.text("Hide");
+                        }
+        
+                        callBack(list);
+                    });
+                });
+            }
+        
+            function clearGoogleEvents(id, button) {
+                var i,
+                    list = calendar.mobiscroll('getEvents'),
+                    l = [];
+        
+                for (i = 0; i < list.length; i++) {
+                    if (list[i].calendarId == id) {
+                        l.push(list[i]._id);
+                    }
+                }
+        
+                calendar.mobiscroll('removeEvent', l);
+        
+                if (button) {
+                    button.text("Show");
+                }
+            }
+        
+            var timer,
+                requestCounter = 0,
+                clientId = '682313765291.apps.googleusercontent.com',
+                eventColor = {},
+                calendarColors = {},
+                calId = {}, //registrate which ids are in the event list
+                calendar = $('#demo'),
+                firstDay = new Date(),
+                lastDay = new Date();
+        
+            loadGoogleSDK();
+            loadFacebookSDK();
+        
+            calendar = $('#demo').mobiscroll().calendar({
+                theme: 'mobiscroll',                     // Specify theme like: theme: 'ios' or omit setting to use default
+                lang: 'zh',                              // Specify language like: lang: 'pl' or omit setting to use default
+                display: 'inline',                       // Specify display mode like: display: 'bottom' or omit setting to use default
+                layout: 'liquid',                        // More info about layout: http://docs.mobiscroll.com/2-17-0/calendar#!opt-layout
+                divergentDayChange: false,               // More info about divergentDayChange: http://docs.mobiscroll.com/2-17-0/calendar#!opt-divergentDayChange
+                markedDisplay: 'bottom',                 // More info about markedDisplay: http://docs.mobiscroll.com/2-17-0/calendar#!opt-markedDisplay
+                events: [],                              // More info about events: http://docs.mobiscroll.com/2-17-0/calendar#!opt-events
+                onMonthChange: function (year, month) {  // More info about onMonthChange: http://docs.mobiscroll.com/2-17-0/calendar#!events-onMonthChange
+                    var list = [];
+                    clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        getFirstAndLastDay(year, month);
+                        $.each(calId, function (i) {
+                            if (i == 'fb' || i == 'nfb') {
+                                getFBEvents(i, list, callBackSetEvent);
+                            } else {
+                                getGoogleEvents(i, list, callBackSetEvent);
+                            }
+                        });
+                    }, 100);
+                }
+            });
+        
+            var date = new Date();
+                firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+                lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        
+            // Facebook auth
+            $('#fbAuth').off().on('click', function () {
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        createFBList();
+                    } else {
+                        FB.login(function (response) {
+                            if (response.authResponse) {
+                                createFBList();
+                            }
+                        }, { scope: 'user_events'});
+                    }
+                });
+                return false;
+            });
+        
+            $("#fbList").empty().off().on('click', '.md-cal-sync', function () {
+                if ($(this).text() == "Show") {
+                    getFBEvents($(this).context.id, [], callBackAddevent, $(this));
+                } else {
+                    clearFBEvents($(this).context.id, $(this));
+                    delete calId[$(this).context.id];
+                }
+                return false;
+            });
+        
+            // Google auth
+            $('#googleAuth').off().on('click', function () {
+                if ($('#googleList li').length == 0) {
+                    gapi.auth.authorize({ client_id: clientId, scope: 'https://www.googleapis.com/auth/calendar', immediate: false }, function (authResult) {
+                        if (authResult) {
+                            getGoogleCalendars();
+                        }
+                    });
+                }
+                return false;
+            });
+        
+            $("#googleList").empty().off().on('click', '.md-cal-sync', function () {
+                if ($(this).text() == "Hide") {
+                    delete calId[$(this).data('calendar-id')];
+                    clearGoogleEvents($(this).data('calendar-id'), $(this));
+                } else {
+                    getGoogleEvents($(this).data('calendar-id'), [], callBackAddevent, $(this));
+                }
+                return false;
+            });
+        });
+    </script>
+</head>
+<body class="demo-comp-calendar demo-display-inline demo-theme-mobiscroll">
+    <div class="demo-iframe demo-sync">
+        <!-- Calendar demo markup -->
+        
+        <div id="fb-root"></div>
+        
+        <div id="demo"></div>
+        
+        <ul id="googleList" class="md-cal-list"></ul>
+        <ul id="fbList" class="md-cal-list"></ul>
+        
+        <div class="md-cal-btn-c">
+            <button id="fbAuth" class="md-cal-auth">Add Facebook Events</button>
+            <button id="googleAuth" class="md-cal-auth">Add Google Calendars</button>
+        </div>
+        
+    </div>
+</body>
+</html>

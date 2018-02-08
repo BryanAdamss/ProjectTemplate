@@ -1,0 +1,78 @@
+.mbsc-jqm .dwc {
+    padding: 30px 2px 4px 2px;
+    overflow: visible;
+}
+.mbsc-jqm .dwhl {
+    padding-top: 4px;
+}
+.mbsc-jqm .dwl {
+    border: 0;
+    background: none;
+    top: -31px;
+}
+.mbsc-jqm .dwfl {
+    padding: 4px 2px 1px 2px;
+}
+.mbsc-jqm .dwwl {
+    border-radius: 4px;
+}
+.mbsc-jqm14 .dwwl {
+    border: 1px solid transparent;
+}
+.mbsc-jqm .dwwol {
+    z-index: 3;
+    border-left: 0;
+    border-right: 0;
+    padding: 0 3px;
+    margin: 0 -3px;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+}
+.mbsc-jqm .dw-ltr .dwfl:first-child .dwwol,
+.mbsc-jqm .dw-rtl .dwfl:last-child .dwwol {
+    padding-left: 5px;
+    margin-left: -5px;
+}
+.mbsc-jqm .dw-ltr .dwfl:last-child .dwwol,
+.mbsc-jqm .dw-rtl .dwfl:first-child .dwwol {
+    padding-right: 5px;
+    margin-right: -5px;
+}
+.mbsc-jqm .dw-li {
+    font-size: 26px;
+}
+.mbsc-jqm .dw-hl {
+    background: rgba(0,0,0,.1);
+}
+/* Clickpick mode */
+.mbsc-jqm .dwwb {
+    margin: -1px;
+    padding: 0;
+}
+.mbsc-jqm .dwwb span {
+    padding: 0;
+}
+.mbsc-jqm .dwwb .ui-btn-inner {
+    margin-top: -1px;
+}
+.mbsc-jqm .dwwbp {
+    border-radius: 4px 4px 0 0;
+}
+.mbsc-jqm .dwwbm {
+    border-radius: 0 0 4px 4px;
+}
+.mbsc-jqm .dwwbp span {
+    font-size: 40px;
+    font-weight: normal;
+}
+.mbsc-jqm .dwwbm span {
+    font-size: 32px;
+}
+.mbsc-jqm .dwpm .dwl {
+    border: 0;
+    background: none;
+}
+/* Group select */
+.mbsc-jqm .dw-w-gr {
+    font-size: 20px;
+}

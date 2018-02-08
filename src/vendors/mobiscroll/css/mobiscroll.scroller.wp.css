@@ -1,0 +1,165 @@
+/* Box sizing */
+.mbsc-wp .dw-li,
+.mbsc-wp .dwwb {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mbsc-wp .dwl {
+    font-size: .75em;
+}
+.mbsc-wp .dwc {
+    padding: 1.875em 0 0 0;
+}
+.mbsc-wp .dwhl {
+    padding: 0;
+}
+.mbsc-wp .dwwc {
+    padding: .188em;
+}
+.mbsc-wp .dwwl {
+    padding: 0 .125em;
+}
+.mbsc-wp .dw-li {
+    padding: 0;
+    font-size: 1.625em;
+    letter-spacing: -.038em;
+    text-align: left;
+    opacity: 0;
+    filter: Alpha(Opacity=0);
+}
+.mbsc-wp .dw-i {
+    position: relative;
+    top: 4%;
+    height: 92%;
+    padding: 0 .192em;
+    border: 2px solid #4c4c4c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    filter: inherit;
+}
+.mbsc-wp .dw-li .dw-i {
+    /*width: 99.5%;*/
+    color: #fff;
+}
+.mbsc-wp .wpa .dw-li, 
+.mbsc-wp .dwa .dw-li {
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+}
+.mbsc-wp .wpa .dw-v, 
+.mbsc-wp .wpa .dw-fv,
+.mbsc-wp .dwa .dw-v,
+.mbsc-wp .dwa .dw-fv { 
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+.mbsc-wp .dw-day, 
+.mbsc-wp .dw-mon {
+    display: block;
+    line-height: 1.636em;
+    font-size: .423em;
+    letter-spacing: normal;
+    position: absolute;
+    bottom: 0;
+    filter: inherit;
+}
+.mbsc-wp .dw-sel {
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+.mbsc-wp .dw-sel .dw-i,
+.mbsc-wp .dw-hl .dw-i {
+    color: #fff;
+    background: #1a9fe0;
+    border-color: #1a9fe0;
+}
+.mbsc-wp .dwwo {
+    display: none;
+}
+.mbsc-wp .dwwol {
+    display: none;
+}
+/* +/- buttons */
+.mbsc-wp .dwwb {
+    background: #1f1f1f;
+}
+.mbsc-wp .dwwb:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2em;
+    margin: -1.182em 0 0 -1.182em;
+    color: #fff;
+    line-height: 2em;
+    font-size: .688em;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 1.182em;
+}
+.mbsc-wp .dwwl .dwb-a {
+    top: auto;
+    background: #1f1f1f;
+}
+.mbsc-wp .dwwl .dwb-a:before {
+    color: #000;
+}
+.mbsc-wp .dwwb span {
+    display: none;
+}
+/* Multiple select */
+.mbsc-wp .dwwms .dw-li {
+    padding: 0;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+}
+.mbsc-wp .dwwms .dw-v {
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+.mbsc-wp .dwwms .dw-li .dw-i {
+    color: #fff;
+    border: 0;
+    padding-left: 1.538em;
+    background: none;
+}
+.mbsc-wp .dwwms .dw-li:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: .192em;
+    width: .769em;
+    height: .769em;
+    margin-top: -.385em;
+    border: 2px solid #fff;
+}
+.mbsc-wp .dwwms .dw-msel:before {
+    z-index: 2;
+    top: 50%;
+    left: .313em;
+    width: 1.375em;
+    margin-top: -.5em;
+    font-size: .615em;
+    line-height: 1.25em;
+    color: #fff;
+}
+/* Group select */
+.mbsc-wp .dw-select-gr.wpa .dw-w-gr {
+    font-size: 22px;
+    font-weight: normal;
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+.mbsc-wp .dw-select-gr .dw-w-gr .dw-i {
+    border: 0;
+    padding-left: 5px;
+}
+.mbsc-wp .dw-select-gr .dw-w-gr:after {
+    display: none;
+}
+
+
+

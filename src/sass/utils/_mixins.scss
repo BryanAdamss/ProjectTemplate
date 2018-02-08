@@ -1,15 +1,15 @@
 @charset "UTF-8";
 // 选择文本样式
 @mixin selection($bgColor:#e74c3c, $color:#ecf0f1) {
-     ::selection {
+    ::selection {
         background-color: $bgColor;
         color: $color;
     }
-     ::-moz-selection {
+    ::-moz-selection {
         background-color: $bgColor;
         color: $color;
     }
-     ::-webkit-selection {
+    ::-webkit-selection {
         background-color: $bgColor;
         color: $color;
     }
@@ -82,8 +82,7 @@
         font-size: 16px;
         line-height: 1.625;
         font-family: $baseFontPC;
-    }
-    @else {
+    } @else {
         font-size: ($designWidth/10)/($designWidth/2)*100vw; // 设计图750，默认1rem为7.5，所以通过这种方式将html的font-size设置为75px，配套的px2rem中1rem也为75px；如果设置为font-size为7.5，可以做到rem、vw最终得到相同的px值，但是因为有字体大小限制(最小12px)，所以只能使用75px
         line-height: 1.5;
         font-family: $baseFontMobile; // 为了不让基准字体无限变大或变小破坏布局，所以必须做一个限制
@@ -124,7 +123,8 @@
             // 1000px往后是每100像素0.5px增加
             font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
             font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
-        } // body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小，并让其居中
+        }
+        // body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小，并让其居中
         max-width: 640px;
         min-width: 320px;
         margin-left: auto;
@@ -157,8 +157,7 @@
 @mixin bgAlpha($bgcolor: rgba(0, 0, 0, .5)) {
     @if $filter {
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
-    }
-    @else {
+    } @else {
         background-color: #333;
     }
     background-color: $bgcolor;
@@ -169,8 +168,7 @@
     @if $line==1 {
         white-space: nowrap;
         text-overflow: ellipsis;
-    }
-    @else {
+    } @else {
         display: -webkit-box;
         -webkit-line-clamp: $line;
         -webkit-box-orient: vertical;
@@ -258,8 +256,6 @@
         margin-left: -$rightWidth+px;
     }
 }
-
-
 
 // 针对ie8设置样式
 @mixin ie8() {
@@ -355,10 +351,9 @@
         &:only-child {
             @content;
         }
-    }
-    @else {
+    } @else {
         &:first-child:nth-last-child(#{$n}),
-        &:first-child:nth-last-child(#{$n})~& {
+        &:first-child:nth-last-child(#{$n}) ~ & {
             @content;
         }
     }

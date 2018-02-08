@@ -5,6 +5,8 @@
     window.location.href = 'ie.html';
 </script>
 <![endif]-->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/weui/weui.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <!-- IE8及以下的浏览器使用兼容补丁 -->
 <!--[if lte IE 8]>
@@ -18,29 +20,37 @@
     <div class="c-Sticky">
         <div class="Header animated fadeInUp">头部</div>
         <div class="c-Sticky-bd">
-
             <!--轮播-->
-            <div class="c-Carousel">
-                <ul class="c-Carousel-list">
-                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://file.ah122.cn/upload/2017-03-22/3d5f6bec-f195-4a56-bb57-2035c638be4d.jpg">
+            <div class="c-ImgSlider">
+                <ul class="c-ImgSlider-list">
+                    <li class="c-ImgSlider-item" data-href="http://www.baidu.com" data-bg="http://file.ah122.cn/upload/2017-03-22/3d5f6bec-f195-4a56-bb57-2035c638be4d.jpg">
                     </li>
-                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/Banner.png">
+                    <li class="c-ImgSlider-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/Banner.png">
                     </li>
-                    <li class="c-Carousel-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/banner-cxah-app.jpg">
+                    <li class="c-ImgSlider-item" data-href="http://www.baidu.com" data-bg="http://ah-ctx.com/static/img/banner-cxah-app.jpg">
                     </li>
                 </ul>
             </div>
             <!--轮播 end-->
+
             <!--测试tplEngine-->
             <div id="tplBox"></div>
             <!--测试tplEngine end-->
+
             <!--测试移入移出方向-->
-            <div style="text-align: center;">
-                <span class="testMoveDir" style="display:inline-block;width:200px;height:200px;background-color:#999;"></span>
-                <span class="testMoveDir" style="display:inline-block;width:200px;height:200px;background-color:#999;margin-top:20px;margin-left:100px;"></span>
-                <div class="testMoveDirInfo"></div>
-            </div>
+            <div id="testMoveDir" style="text-align: center;width:200px;height:200px;background-color:#999;margin:10px auto;"></div>
             <!--测试移入移出方向 end-->
+
+            <!--测试双飞翼布局-->
+            <div class="c-DoubleWing">
+                <div class="c-DoubleWing-main">
+                    <div class="c-DoubleWing-mainInner">主列</div>
+                </div>
+                <div class="c-DoubleWing-left">左列</div>
+                <div class="c-DoubleWing-right">右列</div>
+            </div>
+            <!--测试双飞翼布局 end-->
+
             <!--网格-->
             <style>
                 .c-Row [class^="c-Row-col"] {
@@ -153,6 +163,7 @@
                 <div class="c-Row-col8">3</div>
             </div>
             <!--网格 end-->
+
             <!--按钮-->
             <div style="width:200px;margin:20px auto;">
                 <input type="button" value="按钮" class="c-Btn c-Btn--round" disabled>
@@ -168,6 +179,7 @@
                 <a href="javascript:;" class="c-BorderBtn c-BorderBtn--primary c-BorderBtn--round" role="button">按钮</a>
             </div>
             <!--按钮 end-->
+
             <!--表单-->
             <div style="width:400px;margin:20px auto;">
                 <input type="text" class="c-Field">
@@ -214,6 +226,7 @@
                 </label>
             </div>
             <!--表单end-->
+
             <!--layer-->
             <style>
                 .c-Layer .layui-layer-content {
@@ -224,6 +237,7 @@
                 <button type="button" class="c-Btn js-layer">点击弹出layer</button>
             </div>
             <!--layer end-->
+
             <!--tab切换-->
             <style>
                 .c-Tabs-item {
@@ -262,19 +276,27 @@
                 <div class="c-Targets-item">target4</div>
             </div>
             <!--tab切换 end-->
+
+            <!--分页器-->
+            <div id="js_page"></div>
+            <!--分页器 end-->
+
             <!--拖拽-->
             <div id="box" style="width:100px;">
                 <div id="box-hd" style="line-height: 2em;background-color:red;">可以拖拽</div>
                 <div class="box-bd" style="height: 5em;background-color:blue;">bd</div>
             </div>
             <!--拖拽 end-->
+
             <!--波点-->
             <div class="bgPolka"></div>
             <div class="bgCheckboard"></div>
             <!--波点 end-->
+
             <!--3d文字-->
             <div class="text-3d">3D文字</div>
             <!--3d文字 end-->
+
             <!--长阴影文字-->
             <div class="long-shadow">Long Shadow</div>
             <!--长阴影文字 end-->
@@ -300,15 +322,8 @@
             </ul>
             <!--测试根据元素数量选择元素end-->
 
-            <!--测试双飞翼布局-->
-            <div class="c-Db">
-                <div class="c-Db-item c-Db-item--main">
-                    <div class="c-Db-item c-Db-item--mainInner">主体内容</div>
-                </div>
-                <div class="c-Db-item c-Db-item--left">left</div>
-                <div class="c-Db-item c-Db-item--right">right</div>
-            </div>
-            <!--测试双飞翼布局 end-->
+
+
         </div>
         <div class="c-Sticky-ft">页脚</div>
     </div>
@@ -320,7 +335,6 @@
         <h1><@this.text@></h1>
     </script>
     <!--自定义模板end -->
-
 
     <script src="js/lib/require-2.3.3.min.js" data-main="js/index"></script>
 </body>

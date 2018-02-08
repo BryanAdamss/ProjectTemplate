@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+    <title>Marked days with text</title>
+
+    <!-- jQuery Include -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Framework Include -->
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css" type="text/css" />
+    <script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+
+    <style type="text/css">
+        
+        /* Demo Page styling, you can ignore this in your implementation */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.8em 2.6em;
+            margin: 20px 10px 0 0;
+            outline: 0;
+            border: 0;
+            overflow: visible;
+            cursor: pointer;
+            color: #fff;
+            background: #5185a8;
+            font-family: Arial, sans-serif, verdana;
+            font-size: 14px;
+            font-weight: 100;
+            -webkit-transition: background 0.3s ease-out;
+            -moz-transition: background 0.3s ease-out;
+            -o-transition: background 0.3s ease-out;
+            transition: background 0.3s ease-out;
+        }
+        
+        button:hover {
+            background: #34566d;
+        }
+
+        input {
+            width: 100%;
+            margin: 0 0 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            background: #fff;
+            font-family: Arial, sans-serif,verdana;
+            text-shadow: none;
+            color: #000;
+            font-size: 15px;
+            -webkit-appearance: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .demo-iframe { 
+            padding: 10px 10px 10px 10px; 
+            text-shadow: none; 
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+        
+            // Mobiscroll Calendar initialization
+            $('#demo').mobiscroll().calendar({
+                theme: 'mobiscroll',  // Specify theme like: theme: 'ios' or omit setting to use default
+                lang: 'zh',           // Specify language like: lang: 'pl' or omit setting to use default
+                display: 'modal',     // Specify display mode like: display: 'bottom' or omit setting to use default
+                layout: 'liquid',     // More info about layout: http://docs.mobiscroll.com/2-17-0/calendar#!opt-layout
+                events: true,         // More info about events: http://docs.mobiscroll.com/2-17-0/calendar#!opt-events
+                marked: [             // More info about marked: http://docs.mobiscroll.com/2-17-0/calendar#!opt-marked
+                    { d: '1/1', text: 'New Years' }, 
+                    { d: '1/17', text: 'Nick BD' }, 
+                    { d: '2/20', text: 'Heather BD' }, 
+                    { d: '3/10', text: 'Max BD' }, 
+                    { d: '4/30', text: 'Anniversary', color: 'red' },
+                    { d: new Date(2013, 5, 13), text: 'jQuery Conference Portland', color: '#0769AD' }, 
+                    { d: new Date(2013, 5, 14), text: 'jQuery Conference Portland', color: '#0769AD' }, 
+                    { d: '5/15', text: 'John BD' }, 
+                    { d: '5/17', text: 'Jenna BD' }, 
+                    { d: '5/20', text: 'Frank BD' }, 
+                    { d: '5/21', text: 'Neil BD' }, 
+                    { d: '5/30', text: 'Dan BD' }, 
+                    { d: '6/7', text: 'Sam BD' }, 
+                    { d: '6/9', text: 'Jack BD' }, 
+                    { d: '6/15', text: 'Deb BD' }, 
+                    { d: '6/21', text: 'Dexter BD' }, 
+                    { d: '7/10', text: 'Meg BD', color: 'red' },
+                    { d: '7/19', text: 'Katie BD' }, 
+                    { d: '8/30', text: 'Luke BD', color: 'crimson' }, 
+                    { d: '12/25', text: 'Christmas' },
+                    { d: '10/31', text: 'Halloween'},
+                    { d: new Date(2015, 10, 26), text: 'Thanksgiving'},
+                    { d: new Date(2015, 09, 12), text: 'Colombus Day'}
+                ]
+            });    
+            
+            $('#show').click(function(){
+                $('#demo').mobiscroll('show'); 
+                return false;
+            });
+        
+            $('#clear').click(function () {
+                $('#demo').mobiscroll('clear');
+                return false;
+            });
+            
+        });
+        
+    </script>
+</head>
+<body class="demo-comp-calendar demo-display-modal demo-theme-mobiscroll">
+    <div class="demo-iframe demo-markedtext">
+        <!-- Calendar demo markup -->
+        
+        <input id="demo" placeholder="Please Select ..." />
+        
+        
+        <button id="clear">Clear</button>
+        <button id="show">Show</button>
+    </div>
+</body>
+</html>

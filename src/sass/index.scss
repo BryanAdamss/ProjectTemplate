@@ -1,5 +1,6 @@
 ﻿@charset "UTF-8";
-//导入自定义变量
+// 下面为一些配置相关变量、mixin、placeholder工具的导入
+// 导入自定义变量
 @import "utils/_variablesCustom";
 // 导入默认变量
 @import "utils/_variables";
@@ -7,25 +8,21 @@
 @import "utils/_function";
 // 导入混合宏
 @import "utils/_mixins";
+// 导入媒体查询混合宏
+@import "utils/_mediaQuery";
 // 导入占位样式
 @import "utils/_placeholders";
-// 导入normalize
-@import "base/_normalize";
-// 导入排版样式
-@import "base/_typography";
-// 导入媒体查询
-@import "layout/_mediaQuery";
-//@import "layout/_grid";// 旧网格
+// 下面为直接的css导入；(_normalize、_typography、_helpers已经在common.scss中导入了，这里无需重复导入，这里仅需导入当前页面需要的模块)
+// 导入布局相关
 @import "layout/_gridNew";
-// 导入助手样式
-@import "helpers/_helpers";
 // 导入模块
 @import "modules/_button";
 @import "modules/_form";
 @import "modules/_animate";
-@import "modules/_ajaxLoading";
+@import "modules/_loading";
 // 导入插件样式
-@import "vendors/_c_carousel";
+@import "vendors/_c_imgSlider";
+@import "vendors/_c_pagination";
 
 // 页面具体样式
 // 设置基本字体
@@ -99,17 +96,15 @@ body {
     }
 }
 
-.c-Db {
-    @at-root #{&}-item {
-        @include DoubleWing(100, 200);
-        @at-root #{&}--main{
-            background-color: blue;
-        }
-        @at-root #{&}--left{
-            background-color: red;
-        }
-        @at-root #{&}--right{
-            background-color: olive;
-        }
+.c-DoubleWing {
+    @include DoubleWing(100, 200);
+    @at-root #{&}-main {
+        background-color: blue;
+    }
+    @at-root #{&}-left {
+        background-color: red;
+    }
+    @at-root #{&}-right {
+        background-color: olive;
     }
 }

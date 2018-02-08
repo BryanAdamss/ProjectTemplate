@@ -1,0 +1,187 @@
+@charset "UTF-8";
+.c-Paginations {
+    font-size: 14px;
+    color: #333;
+    @at-root #{&}-size {
+        @include inline-block();
+    }
+    @at-root #{&}-select {
+        width: 3em;
+        height: 2em;
+        line-height: 2em;
+        outline: none;
+        border: 1px solid #bbb;
+        margin: 0 0 0 .4em;
+        font-size: 14px;
+    }
+    @at-root #{&}-main {
+        @include inline-block();
+        margin: 0 1em;
+    }
+    @at-root #{&}-list {
+        @include inline-block();
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+    @at-root #{&}-item {
+        @include inline-block();
+        width: 3em;
+        padding: 0 .4em;
+        height: 2em;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        background-color: #fff;
+        @at-root #{&}:hover {
+            background-color: #fafafa;
+            .c-Paginations-link {
+                color: #4fa2ff;
+            }
+        }
+
+        @at-root #{&}:last-child {
+            border-right: 1px solid #ccc;
+        }
+
+        @at-root #{&}.is-cur {
+            background-color: #4fa2ff;
+            border-color: #4fa2ff;
+            .c-Paginations-link {
+                color: #fff;
+            }
+        }
+    }
+    @at-root #{&}-link {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        line-height: 2em;
+    }
+    @at-root #{&}-total {
+        @include inline-block();
+        margin-left: .2em;
+    }
+    @at-root #{&}-btn {
+        @include inline-block();
+        border: 1px solid #bbb;
+        margin-left: .5em;
+        color: $mainTone;
+        height: 2em;
+        line-height: 2em;
+        @at-root #{&}:hover {
+            color: #4fa2ff;
+        }
+    }
+    @at-root #{&}-jumpfield {
+        @include inline-block();
+        width: 3em;
+        height: 2em;
+        line-height: 2em;
+        outline: none;
+        border: 1px solid #bbb;
+        font-size: 14px;
+        padding: 0 .5em;
+    }
+    @at-root #{&}-prev {
+        @include inline-block();
+        text-decoration: none;
+        color: #333;
+        min-width: 2em;
+        padding: 0 .4em;
+        height: 2em;
+        line-height: 2em;
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        @at-root #{&}:hover {
+            background-color: #fafafa;
+            color: #4fa2ff;
+        }
+        @at-root #{&}.is-disabled {
+            color: #ddd;
+            cursor: not-allowed;
+            background-color: #fafafa;
+            pointer-events: none;
+        }
+    }
+    @at-root #{&}-next {
+        @include inline-block();
+        text-decoration: none;
+        color: #333;
+        min-width: 2em;
+        padding: 0 .4em;
+        height: 2em;
+        line-height: 2em;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        @at-root #{&}:hover {
+            background-color: #fafafa;
+            color: #4fa2ff;
+        }
+        @at-root #{&}.is-disabled {
+            color: #ddd;
+            cursor: not-allowed;
+            background-color: #fafafa;
+            pointer-events: none;
+        }
+    }
+    @at-root #{&}-first {
+        @include inline-block();
+        text-decoration: none;
+        color: #333;
+        min-width: 2em;
+        padding: 0 .4em;
+        height: 2em;
+        line-height: 2em;
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        @at-root #{&}:hover {
+            background-color: #fafafa;
+            color: #4fa2ff;
+        }
+        @at-root #{&}.is-disabled {
+            color: #ddd;
+            cursor: not-allowed;
+            background-color: #fafafa;
+            pointer-events: none;
+        }
+    }
+    @at-root #{&}-last {
+        @include inline-block();
+        text-decoration: none;
+        color: #333;
+        min-width: 2em;
+        padding: 0 .4em;
+        height: 2em;
+        line-height: 2em;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        @at-root #{&}:hover {
+            background-color: #fafafa;
+            color: #4fa2ff;
+        }
+        @at-root #{&}.is-disabled {
+            color: #ddd;
+            cursor: not-allowed;
+            background-color: #fafafa;
+            pointer-events: none;
+        }
+    }
+    @at-root #{&}-jump {
+        @include inline-block();
+        text-decoration: none;
+        color: #333;
+        min-width: 2em;
+        padding: 0 .4em;
+        height: 2em;
+        line-height: 2em;
+    }
+}
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+    <title>Events</title>
+
+    <!-- jQuery Include -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Framework Include -->
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css" type="text/css" />
+    <script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+
+    <style type="text/css">
+        
+        /* Demo Page styling, you can ignore this in your implementation */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.8em 2.6em;
+            margin: 20px 10px 0 0;
+            outline: 0;
+            border: 0;
+            overflow: visible;
+            cursor: pointer;
+            color: #fff;
+            background: #5185a8;
+            font-family: Arial, sans-serif, verdana;
+            font-size: 14px;
+            font-weight: 100;
+            -webkit-transition: background 0.3s ease-out;
+            -moz-transition: background 0.3s ease-out;
+            -o-transition: background 0.3s ease-out;
+            transition: background 0.3s ease-out;
+        }
+        
+        button:hover {
+            background: #34566d;
+        }
+
+        input {
+            width: 100%;
+            margin: 0 0 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            background: #fff;
+            font-family: Arial, sans-serif,verdana;
+            text-shadow: none;
+            color: #000;
+            font-size: 15px;
+            -webkit-appearance: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .demo-iframe { 
+            padding: 10px 10px 10px 10px; 
+            text-shadow: none; 
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+        
+            var now = new Date();
+        
+            // Mobiscroll Calendar initialization
+            $('#demo').mobiscroll().calendar({	
+                theme: 'mobiscroll',           // Specify theme like: theme: 'ios' or omit setting to use default
+                lang: 'zh',                    // Specify language like: lang: 'pl' or omit setting to use default
+                display: 'bottom',             // Specify display mode like: display: 'bottom' or omit setting to use default
+                layout: 'liquid',              // More info about layout: http://docs.mobiscroll.com/2-17-0/calendar#!opt-layout
+                firstDay: 1,                   // More info about firstDay: http://docs.mobiscroll.com/2-17-0/calendar#!opt-firstDay
+                navigation: 'yearMonth',       // More info about navigation: http://docs.mobiscroll.com/2-17-0/calendar#!opt-navigation
+                swipeDirection: 'horizontal',  // More info about swipeDirection: http://docs.mobiscroll.com/2-17-0/calendar#!opt-swipeDirection
+                weekCounter: 'year',           // More info about weekCounter: http://docs.mobiscroll.com/2-17-0/calendar#!opt-weekCounter
+                showDivergentDays: true,       // More info about showDivergentDays: http://docs.mobiscroll.com/2-17-0/calendar#!opt-showDivergentDays
+                markedText: true,              // More info about markedText: http://docs.mobiscroll.com/2-17-0/calendar#!opt-markedText
+                events: [                      // More info about events: http://docs.mobiscroll.com/2-17-0/calendar#!opt-events
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 8, 0), text: 'Green box to post office', color: '#6e7f29' },
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 8, 45), text: 'Quick mtg. with Martin', color: '#de3d83' },
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 9, 30), text: 'Product team mtg.', color: '#f67944' },
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 11, 0), text: 'Stakeholder mtg.', color: '#f67944' },
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 12, 30), text: 'Lunch @ Butcher\'s', color: '#00aabb' },
+                    { d: new Date(now.getFullYear(), now.getMonth(), 8, 15, 0), text: 'General orientation', color: '#f67944' },
+                    { d: (now.getMonth() + 1) + '/14', text: 'Dexter BD', color: '#37bbe4' },
+                    { d: (now.getMonth() + 1) + '/5', text: 'Luke BD', color: '#37bbe4' },
+                    { d: 'w3', text: 'Employment (Semi-weekly)', color: '#635045' },
+                    { d: 'w5', text: 'Employment (Semi-weekly)', color: '#635045' },
+                    { start: new Date(now.getFullYear(), now.getMonth(), 26), end: new Date(now.getFullYear(), now.getMonth(), 31), text: 'Dean OFF', color: '#e7b300' },
+                    { start: new Date(now.getFullYear(), (now.getMonth() + 1), 5), end: new Date(now.getFullYear(), (now.getMonth() + 1), 14), text: 'Mike OFF', color: '#e7b300' },
+                    { d: '11/2', text: 'File Form 720 for the third quarter', color: '#a63e14' },
+                    { d: '11/2', text: 'File Form 730 and pay tax on wagers accepted during September', color: '#a63e14' },
+                    { d: '11/2', text: 'File Form 2290 and pay the tax for vehicles first used during September', color: '#a63e14' },
+                    { d: '11/2', text: 'File Form 941 for the third quarter', color: '#a63e14' },
+                    { d: '11/2', text: 'Deposit FUTA owed through Sep if more than $500', color: '#a63e14' },
+                    { d: '11/30', text: 'Deposit payroll tax for payments on Nov 21-24 if the semiweekly deposit rule applies', color: '#a63e14' },
+                    { d: '11/30', text: 'File Form 730 and pay tax on wagers accepted during October', color: '#a63e14' },
+                    { d: '11/30', text: 'File Form 2290 and pay the tax for vehicles first used during October', color: '#a63e14' }
+                ]
+        
+            }); 
+            
+            $('#show').click(function(){
+                $('#demo').mobiscroll('show'); 
+                return false;
+            });
+            
+        });
+    </script>
+</head>
+<body class="demo-comp-calendar demo-display-bottom demo-theme-mobiscroll">
+    <div class="demo-iframe demo-event">
+        <!-- Calendar demo markup -->
+        
+        <div id="demo"></div>
+        
+        <button id="show">Show calendar</button>
+    </div>
+</body>
+</html>
