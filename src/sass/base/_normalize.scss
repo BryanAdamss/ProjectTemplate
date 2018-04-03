@@ -1,7 +1,5 @@
 @charset "UTF-8";
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css
-    支持IE8+
-  */
+// normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css 支持IE8+
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -250,14 +248,15 @@ html {
     box-sizing: inherit;
 }
 
-::-webkit-scrollbar{
-    width:2px;
-    height:2px;
+// 滚动条
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
     background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 ul, ol {
@@ -266,7 +265,7 @@ ul, ol {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -281,6 +280,10 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
     -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
+// 禁用样式
 :disabled, [disabled], [aria-disabled] {
-    @include disabled();
+    background-color: #e6e6e6 !important;
+    color: #ababab !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 a.c-Btn, a.c-BorderBtn {
   -webkit-tap-highlight-color: transparent; }
 
@@ -18,14 +17,272 @@ a.c-Btn, a.c-BorderBtn {
 a.c-Btn, a.c-BorderBtn {
   -webkit-touch-callout: none; }
 
-.c-DoubleWing {
-  *zoom: 1; }
-  .c-DoubleWing:before, .c-DoubleWing:after {
-    content: "";
-    display: table; }
-  .c-DoubleWing:after {
-    clear: both;
-    overflow: hidden; }
+.u-textBreak {
+  word-wrap: break-word;
+  word-break: break-all; }
+
+.c-DoubleWing:before, .c-DoubleWing:after {
+  content: "";
+  display: table; }
+
+.c-DoubleWing:after {
+  clear: both;
+  overflow: hidden; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+figcaption,
+figure,
+main {
+  display: block; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a:active, a:hover {
+    outline-width: 0; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b,
+strong {
+  font-weight: inherit; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+audio,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0; }
+
+optgroup {
+  font-weight: bold; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+details,
+menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template,
+[hidden] {
+  display: none; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after, *::before, *::after {
+  box-sizing: inherit; }
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset; }
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset; }
+
+:disabled, [disabled], [aria-disabled] {
+  background-color: #e6e6e6 !important;
+  color: #ababab !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important; }
+
+.u-textL {
+  text-align: left !important; }
+
+.u-textC {
+  text-align: center !important; }
+
+.u-textR {
+  text-align: right !important; }
+
+.u-textRtl {
+  direction: rtl !important; }
+
+.u-textMainTone {
+  color: #3da4fe !important; }
+
+.u-textSubTone {
+  color: #fe6e00 !important; }
+
+.u-textWarn {
+  color: #8a6d3b !important; }
+
+.u-textDanger {
+  color: #a94442 !important; }
+
+html {
+  font-size: 16px;
+  line-height: 1.625;
+  font-family: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+
+body {
+  background-color: #fff;
+  min-width: 1260px; }
+  .ie8 body {
+    background-color: blue; }
+  .ie9 body {
+    background-color: red; }
 
 .c-Row {
   font-size: 0; }
@@ -34,9 +291,6 @@ a.c-Btn, a.c-BorderBtn {
     padding-right: 0.5em;
     display: inline-block;
     vertical-align: top;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     font-size: initial;
     font-size: 16px\9;
     text-align: left;
@@ -442,10 +696,7 @@ a.c-Btn, a.c-BorderBtn {
   height: 2em;
   text-align: center;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline; }
+  vertical-align: middle; }
 
 a.c-Btn, a.c-BorderBtn {
   text-decoration: none; }
@@ -510,9 +761,6 @@ a.c-Btn, a.c-BorderBtn {
 .c-File {
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   position: relative;
   cursor: pointer; }
   .c-File input[type="file"] {
@@ -521,9 +769,6 @@ a.c-Btn, a.c-BorderBtn {
 .c-Radio {
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   cursor: pointer;
   position: relative; }
   .c-Radio input[type="radio"] {
@@ -537,9 +782,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Radio-icon {
     display: inline-block;
     vertical-align: -0.2em;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     width: 1em;
     height: 1em;
     overflow: hidden;
@@ -574,9 +816,6 @@ a.c-Btn, a.c-BorderBtn {
 .c-Checkbox {
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   cursor: pointer;
   position: relative; }
   .c-Checkbox input[type="checkbox"] {
@@ -590,9 +829,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Checkbox-icon {
     display: inline-block;
     vertical-align: -0.2em;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     width: 1em;
     height: 1em;
     overflow: hidden;
@@ -729,15 +965,20 @@ a.c-Btn, a.c-BorderBtn {
   margin: auto;
   z-index: 99999999999;
   transition: .3s;
-  text-align: center; }
-  .c-Loading > img {
+  text-align: center;
+  display: block; }
+  .c-Loading-box {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    max-width: 100px; }
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 0.18667rem;
+    color: #333; }
+  .c-Loading.hasBg {
+    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .c-Loading.is-hided {
+    display: none; }
 
 .c-ImgSlider {
   position: relative; }
@@ -789,10 +1030,7 @@ a.c-Btn, a.c-BorderBtn {
   color: #333; }
   .c-Paginations-size {
     display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline; }
+    vertical-align: middle; }
   .c-Paginations-select {
     width: 3em;
     height: 2em;
@@ -804,25 +1042,16 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-main {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     margin: 0 1em; }
   .c-Paginations-list {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     padding: 0;
     list-style: none;
     margin: 0; }
   .c-Paginations-item {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     width: 3em;
     padding: 0 .4em;
     height: 2em;
@@ -850,16 +1079,10 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-total {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     margin-left: .2em; }
   .c-Paginations-btn {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     border: 1px solid #bbb;
     margin-left: .5em;
     color: #3da4fe;
@@ -870,9 +1093,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-jumpfield {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     width: 3em;
     height: 2em;
     line-height: 2em;
@@ -883,9 +1103,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-prev {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     text-decoration: none;
     color: #333;
     min-width: 2em;
@@ -906,9 +1123,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-next {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     text-decoration: none;
     color: #333;
     min-width: 2em;
@@ -929,9 +1143,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-first {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     text-decoration: none;
     color: #333;
     min-width: 2em;
@@ -952,9 +1163,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-last {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     text-decoration: none;
     color: #333;
     min-width: 2em;
@@ -975,9 +1183,6 @@ a.c-Btn, a.c-BorderBtn {
   .c-Paginations-jump {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
     text-decoration: none;
     color: #333;
     min-width: 2em;
@@ -985,28 +1190,12 @@ a.c-Btn, a.c-BorderBtn {
     height: 2em;
     line-height: 2em; }
 
-html {
-  font-size: 16px;
-  line-height: 1.625;
-  font-family: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
-
-body {
-  background-color: #fff;
-  min-width: 1260px; }
-  .ie8 body {
-    background-color: blue; }
-  .ie9 body {
-    background-color: red; }
-
 html,
 body {
   height: 100%; }
 
 .c-Sticky {
   min-height: 100%;
-  /*IE6不识别min-height*/
-  height: auto !important;
-  height: 100%;
   position: relative; }
 
 .c-Sticky-bd {
@@ -1060,7 +1249,6 @@ body {
 
 .c-DoubleWing-main {
   float: left;
-  _display: inline;
   width: 100%; }
 
 .c-DoubleWing-mainInner {
@@ -1069,13 +1257,11 @@ body {
 
 .c-DoubleWing-left {
   float: left;
-  _display: inline;
   width: 100px;
   margin-left: -100%; }
 
 .c-DoubleWing-right {
   float: left;
-  _display: inline;
   width: 200px;
   margin-left: -200px; }
 

@@ -1,22 +1,34 @@
 ﻿@charset "UTF-8";
-// common.scss主要放置一些通用的样式，如reset、排版、helper；后期可以考虑是否要放置一些通用的模块
-// 下面为一些配置相关变量、mixin、placeholder工具的导入
+// ---------------------------------------------
+// common-m.scss包含默认变量、自定义变量、_mixin、_funciton、_placeholder、_mediaQuery、_normalize、_typography、_helpers以及移动端自适应需要的字体设置
+// ---------------------------------------------
+// 下面为相关变量、_mixin、_funciton、_placeholder、_mediaQuery工具的导入
+// ---------------------------------------------
 // 导入自定义变量
-@import "utils/_variablesCustom-m";
-// 导入默认变量
-@import "utils/_variables";
-// 导入函数
-@import "utils/_function";
-// 导入混合宏
-@import "utils/_mixins";
-// 导入媒体查询混合宏
-@import "utils/_mediaQuery";
-// 导入占位样式
-@import "utils/_placeholders";
+@import "./utils/_variablesCustom-m.scss";
+// 导入工具包包含默认变量、_mixin、_funciton、_placeholder、_mediaQuery
+@import "./utils/_utils.scss";
+// ---------------------------------------------
 // 下面为直接的css(相关工具的调用)导入
+// ---------------------------------------------
 // 导入normalize
-@import "base/_normalize";
+@import "./base/_normalize.scss";
 // 导入排版样式
-@import "base/_typography";
+@import "./base/_typography.scss";
 // 导入助手样式
-@import "helpers/_helpers";
+@import "./helpers/_helpers.scss";
+// ---------------------------------------------
+// 设置移动端字体(实现自适应)
+// ---------------------------------------------
+html {
+    @include htmlFont(M);
+    height: 100%;
+    background-color: #fefefe;
+}
+
+body {
+    @include bodyFontSize(M);
+    background-color: #fff;
+    height: 100%;
+    border: 1px solid red;
+}

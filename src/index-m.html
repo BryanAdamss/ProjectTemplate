@@ -3,22 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content="我是关键字">
-    <meta name="description" content="我是网站描述">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <meta name="format-detection" content="telephone=no,email=no"/>
     <meta name="full-screen" content="yes">
     <meta name="x5-fullscreen" content="true">
+    <meta name="keywords" content="我是关键字">
+    <meta name="description" content="我是网站描述">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no"/>
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
-    <title>我是标题</title>
-    <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" type="text/css" href="css/common.css">
+
+
+<title>我是标题</title>
+<link rel="stylesheet" type="text/css" href="css/common-m.css">
+
 <link rel="stylesheet" type="text/css" href="vendors/mobiscroll/css/mobiscroll.custom-2.17.0.min.css">
 <link rel="stylesheet" type="text/css" href="vendors/photoSwipe/photoswipe.css">
 <link rel="stylesheet" type="text/css" href="vendors/photoSwipe/default-skin/default-skin.css">
 <link rel="stylesheet" type="text/css" href="css/weui/weui.css">
+
 <link rel="stylesheet" type="text/css" href="css/index-m.css">
 </head>
 <!-- 给body加一个空的touchstart事件即可让:active效果在移动端生效 -->
@@ -103,7 +106,7 @@
                     border: 1px solid blue;
                 }
 
-                .testLazySizes-item .lazyload,.testLazySizes-item .lazyloading {
+                .testLazySizes-item .lazyload, .testLazySizes-item .lazyloading {
                     opacity: 0;
                 }
 
@@ -137,7 +140,7 @@
                     border: 1px solid blue;
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size:cover;
+                    background-size: cover;
                 }
 
                 .testLazySizesBg-item.lazyload, .testLazySizesBg-item.lazyloading {
@@ -145,9 +148,9 @@
                 }
             </style>
             <ul class="testLazySizesBg">
-                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
-                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
-                <li class="testLazySizesBg-item lazyload"  data-bg="http://placehold.it/500x200"></li>
+                <li class="testLazySizesBg-item lazyload" data-bg="http://placehold.it/500x200"></li>
+                <li class="testLazySizesBg-item lazyload" data-bg="http://placehold.it/500x200"></li>
+                <li class="testLazySizesBg-item lazyload" data-bg="http://placehold.it/500x200"></li>
             </ul>
             <!--测试lazysizes在背景图上的实现 end-->
         </div>

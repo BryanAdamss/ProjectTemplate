@@ -11,7 +11,7 @@
     border: 1px solid $baseBorderColor;
     transition: all .3s ease-in-out;
     @at-root #{&}--radius {
-        border-radius: $baseBorderRadius;
+        border-radius: 3px;
     }
     @at-root input#{&} {
         // select如果noAppearance，chrome上会没有右侧箭头，所以只对input生效

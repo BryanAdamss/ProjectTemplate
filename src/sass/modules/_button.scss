@@ -44,7 +44,7 @@ a.c-Btn, a.c-BorderBtn {
     }
     @at-root #{&}--radius {
         // 圆角按钮
-        border-radius: $baseBorderRadius;
+        border-radius: 3px;
     }
     @at-root #{&}--round {
         // 设置水平/垂直半径都为高度的一般即可实现round圆角
@@ -70,7 +70,7 @@ a.c-Btn, a.c-BorderBtn {
     }
     @at-root #{&}--radius {
         // 圆角按钮
-        border-radius: $baseBorderRadius;
+        border-radius: 3px;
     }
     @at-root #{&}--round {
         // 设置水平/垂直半径都为高度的一般即可实现round圆角

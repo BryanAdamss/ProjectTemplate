@@ -1,0 +1,16 @@
+﻿@charset "UTF-8";
+// ---------------------------------------------
+// _utils.scss主要是各种工具的入口
+// ---------------------------------------------
+// 下面为默认变量、_mixin、_function、_mediaQuery、_placeholder的导入
+// ---------------------------------------------
+// 导入默认变量
+@import "_variables.scss";
+// 导入函数
+@import "_function.scss";
+// 导入混合宏
+@import "_mixins.scss";
+// 导入媒体查询混合宏
+@import "_mediaQuery.scss";
+// 导入占位样式
+@import "_placeholders.scss";

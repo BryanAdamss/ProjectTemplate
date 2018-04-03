@@ -1,16 +1,7 @@
-@charset "UTF-8";
-.u-clearfix {
-  *zoom: 1; }
-  .u-clearfix:before, .u-clearfix:after {
-    content: "";
-    display: table; }
-  .u-clearfix:after {
-    clear: both;
-    overflow: hidden; }
+.u-textBreak {
+  word-wrap: break-word;
+  word-break: break-all; }
 
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css
-    支持IE8+
-  */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -229,18 +220,6 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
   cursor: not-allowed !important;
   pointer-events: none !important; }
 
-.u-font0 {
-  font-size: 0 !important; }
-
-.u-fontBase {
-  font-size: 16px !important; }
-
-.u-fontBold {
-  font-weight: bold !important; }
-
-.u-noUdl {
-  text-decoration: none !important; }
-
 .u-textL {
   text-align: left !important; }
 
@@ -253,47 +232,27 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
 .u-textRtl {
   direction: rtl !important; }
 
-.u-textBreak {
-  word-wrap: break-word !important;
-  word-break: break-all !important; }
-
 .u-textMainTone {
   color: #3da4fe !important; }
 
 .u-textSubTone {
   color: #fe6e00 !important; }
 
-.u-textDanger {
-  color: #a94442 !important; }
-
 .u-textWarn {
   color: #8a6d3b !important; }
 
-.u-bgMainTone {
-  background-color: #3da4fe !important; }
+.u-textDanger {
+  color: #a94442 !important; }
 
-.u-bgSubTone {
-  background-color: #fe6e00 !important; }
+html {
+  font-size: 16px;
+  line-height: 1.625;
+  font-family: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
 
-.u-marginT {
-  margin-top: 20px !important; }
-
-.u-marginB {
-  margin-bottom: 20px !important; }
-
-.u-marginR {
-  margin-right: 20px !important; }
-
-.u-marginL {
-  margin-left: 20px !important; }
-
-.u-cursorPointer {
-  cursor: pointer !important; }
-
-.u-floatL {
-  float: left;
-  _display: inline; }
-
-.u-floatR {
-  float: right;
-  _display: inline; }
+body {
+  background-color: #fff;
+  min-width: 1260px; }
+  .ie8 body {
+    background-color: blue; }
+  .ie9 body {
+    background-color: red; }

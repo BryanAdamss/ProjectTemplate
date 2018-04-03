@@ -1,15 +1,7 @@
-@charset "UTF-8";
-.u-clearfix:before, .u-clearfix:after {
-  content: "";
-  display: table; }
+.u-textBreak {
+  word-wrap: break-word;
+  word-break: break-all; }
 
-.u-clearfix:after {
-  clear: both;
-  overflow: hidden; }
-
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css
-    支持IE8+
-  */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -228,18 +220,6 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
   cursor: not-allowed !important;
   pointer-events: none !important; }
 
-.u-font0 {
-  font-size: 0 !important; }
-
-.u-fontBase {
-  font-size: 16px !important; }
-
-.u-fontBold {
-  font-weight: bold !important; }
-
-.u-noUdl {
-  text-decoration: none !important; }
-
 .u-textL {
   text-align: left !important; }
 
@@ -252,45 +232,53 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus {
 .u-textRtl {
   direction: rtl !important; }
 
-.u-textBreak {
-  word-wrap: break-word !important;
-  word-break: break-all !important; }
-
 .u-textMainTone {
   color: #3da4fe !important; }
 
 .u-textSubTone {
   color: #fe6e00 !important; }
 
-.u-textDanger {
-  color: #a94442 !important; }
-
 .u-textWarn {
   color: #8a6d3b !important; }
 
-.u-bgMainTone {
-  background-color: #3da4fe !important; }
+.u-textDanger {
+  color: #a94442 !important; }
 
-.u-bgSubTone {
-  background-color: #fe6e00 !important; }
+html {
+  font-size: 20vw;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  height: 100%;
+  background-color: #fefefe; }
+  @media screen and (max-width: 320px) {
+    html {
+      font-size: 64px; } }
+  @media screen and (min-width: 640px) {
+    html {
+      font-size: 128px; } }
 
-.u-marginT {
-  margin-top: 20px !important; }
-
-.u-marginB {
-  margin-bottom: 20px !important; }
-
-.u-marginR {
-  margin-right: 20px !important; }
-
-.u-marginL {
-  margin-left: 20px !important; }
-
-.u-cursorPointer {
-  cursor: pointer !important; }
-
-.u-floatL {
-  float: left; }
-
-.u-floatR {
-  float: right; }
+body {
+  font-size: 16px;
+  max-width: 640px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid red; }
+  @media screen and (min-width: 375px) {
+    body {
+      font-size: calc(100% + 2 * (100vw - 375px) / 39);
+      font-size: calc(16px + 2 * (100vw - 375px) / 39); } }
+  @media screen and (min-width: 414px) {
+    body {
+      font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+      font-size: calc(18px + 4 * (100vw - 414px) / 586); } }
+  @media screen and (min-width: 600px) {
+    body {
+      font-size: calc(125% + 4 * (100vw - 600px) / 400);
+      font-size: calc(20px + 4 * (100vw - 600px) / 400); } }
+  @media screen and (min-width: 1000px) {
+    body {
+      font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+      font-size: calc(22px + 6 * (100vw - 1000px) / 1000); } }

@@ -85,7 +85,7 @@
     } @else {
         font-size: ($designWidth/10)/($designWidth/2)*100vw; // 设计图750，默认1rem为7.5，所以通过这种方式将html的font-size设置为75px，配套的px2rem中1rem也为75px；如果设置为font-size为7.5，可以做到rem、vw最终得到相同的px值，但是因为有字体大小限制(最小12px)，所以只能使用75px
         line-height: 1.5;
-        font-family: $baseFontMobile; // 为了不让基准字体无限变大或变小破坏布局，所以必须做一个限制
+        font-family: $baseFontM; // 为了不让基准字体无限变大或变小破坏布局，所以必须做一个限制
         @media screen and (max-width: 320px) {
             // <320时字体统统为64px
             font-size: 64px;
