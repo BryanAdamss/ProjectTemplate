@@ -9,8 +9,8 @@ $printStyleSwitch: false !default; //是否开启打印样式
 // font相关
 // ---------------------------------------------
 // html基础字体样式
-$baseFontPC: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif; //PC端,$pageType为PC
-$baseFontM: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif; //$pageType为M
+$baseFontPC: arial, \5b8b\4f53, "Hiragino Sans GB", "Microsoft YaHei", sans-serif !default; //PC端,$pageType为PC
+$baseFontM: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif !default; //$pageType为M
 // 常用字体
 $fontSong: \5b8b\4f53 !default; //宋体
 $fontYaHei: "Microsoft YaHei" !default; //微软雅黑
